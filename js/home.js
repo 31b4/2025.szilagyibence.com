@@ -64,16 +64,7 @@ function initAutoHidingHeader() {
 }
 
 // Loading screen control
-function initLoadingScreen() {
-  const loadingOverlay = document.getElementById('loading-overlay');
-  if (!loadingOverlay) return;
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loadingOverlay.classList.add('content-hidden');
-      setTimeout(() => { loadingOverlay.classList.add('hidden'); }, 250);
-    }, 1500);
-  });
-}
+function initLoadingScreen() { /* disabled */ }
 
 function initHomePage() {
   initLoadingScreen();
