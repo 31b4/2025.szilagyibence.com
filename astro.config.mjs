@@ -5,6 +5,9 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.szilagyibence.com',
+  // Custom domain for production
+  site: 'https://szilagyibence.com',
+  // Important for custom-domain (GitHub Pages with CNAME): keep at root
+  base: '/',
   integrations: [tailwind(), sitemap()]
 });
