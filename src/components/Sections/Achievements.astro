@@ -1,9 +1,10 @@
 ---
+const { t } = Astro.props;
 ---
 <section id="achievements" class="relative z-40 py-20 bg-black">
   <div class="container mx-auto px-6">
     <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Achievements</span>
+  <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">{t?.sections?.achievements ?? 'Achievements'}</span>
     </h2>
 
     <div class="space-y-16">
@@ -12,11 +13,11 @@
           <h3 class="text-3xl font-bold">
             <a href="https://github.com/31b4/advent-of-code-2024" target="_blank" rel="noopener"
                class="text-white hover:text-blue-400 transition-colors">
-              Advent of Code - 2022-24
+              {t?.achievements?.aoc?.title ?? 'Advent of Code - 2022-24'}
             </a>
           </h3>
           <p class="text-xl text-gray-300">
-            Amazing puzzles, thanks to 
+            {t?.achievements?.aocThanks ?? 'Amazing puzzles, thanks to'} 
             <a href="https://twitter.com/ericwastl" target="_blank" rel="noopener" 
                class="text-blue-400 hover:text-blue-300 transition-colors">Eric Wastl</a>
           </p>
@@ -48,8 +49,8 @@
                class="w-full max-w-md mx-auto lg:ml-auto lg:mr-0 rounded-lg shadow-2xl" loading="lazy" />
         </div>
         <div class="space-y-6">
-          <h3 class="text-3xl font-bold text-white">Bakonyi Bittfarago Bajnokság - 2022</h3>
-          <p class="text-xl text-gray-300">Programming competition achievements and qualifications</p>
+          <h3 class="text-3xl font-bold text-white">{t?.achievements?.bbb?.title ?? 'Bakonyi Bittfarago Bajnokság - 2022'}</h3>
+          <p class="text-xl text-gray-300">{t?.achievements?.bbb?.subtitle ?? 'Programming competition achievements and qualifications'}</p>
         </div>
       </div>
 
@@ -57,24 +58,24 @@
 
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 text-left lg:text-right">
-          <h3 class="text-3xl font-bold text-white">GAMF Programming Competition - 2021</h3>
-          <p class="text-xl text-gray-300">Semifinals and final sources</p>
+          <h3 class="text-3xl font-bold text-white">{t?.achievements?.gamf?.title ?? 'GAMF Programming Competition - 2021'}</h3>
+          <p class="text-xl text-gray-300">{t?.achievements?.gamf?.subtitle ?? 'Semifinals and final sources'}</p>
           <div class="flex flex-wrap gap-2 lg:justify-end">
             <a href="https://github.com/31b4/GAMF-verseny-1-fordulo" target="_blank" rel="noopener"
                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm transition-colors">
-              Round 1
+        {t?.achievements?.round1 ?? 'Round 1'}
             </a>
             <a href="https://github.com/31b4/GAMF-verseny-2-fordulo" target="_blank" rel="noopener"
                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm transition-colors">
-              Round 2
+        {t?.achievements?.round2 ?? 'Round 2'}
             </a>
             <a href="https://github.com/31b4/GAMF-verseny-3-fordulo" target="_blank" rel="noopener"
                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm transition-colors">
-              Round 3
+        {t?.achievements?.round3 ?? 'Round 3'}
             </a>
             <a href="https://github.com/31b4/GAMF_Donto" target="_blank" rel="noopener"
                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm transition-colors">
-              Final
+        {t?.achievements?.final ?? 'Final'}
             </a>
           </div>
         </div>

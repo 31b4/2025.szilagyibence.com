@@ -1,12 +1,18 @@
 ---
+const { t, lang = "en" } = Astro.props;
+const locales = [
+  { code: "en", label: t?.lang?.en ?? "EN" },
+  { code: "hu", label: t?.lang?.hu ?? "HU" },
+  { code: "es", label: t?.lang?.es ?? "ES" }
+];
 ---
 <nav id="navbar" class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800/50 transition-transform duration-300">
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
       <div class="text-2xl font-bold">
-        <span class="text-white">Sz</span>
+        <span class="text-white">{t?.common?.brandInitialsLeft ?? 'Sz'}</span>
         <span class="text-blue-500 mx-1">•</span>
-        <span class="text-white">B</span>
+        <span class="text-white">{t?.common?.brandInitialsRight ?? 'B'}</span>
       </div>
     <div class="flex items-center space-x-6">
       <a href="https://x.com/31b4_" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"
@@ -25,6 +31,16 @@
         class="text-gray-400 hover:text-white transition-colors duration-300">
           <i class="fa-solid fa-envelope text-2xl"></i>
         </a>
+      <div class="ml-2 relative" x-data="{open:false}" x-cloak>
+        <button class="p-2 rounded hover:bg-gray-800/70 text-gray-300" aria-label="Language" onclick="this.nextElementSibling.classList.toggle('hidden')">
+          <i class="fa-solid fa-globe text-xl"></i>
+        </button>
+        <div class="absolute right-0 mt-2 w-40 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hidden">
+          <a href="/" class={`block px-3 py-2 text-sm hover:bg-gray-800 ${lang==='en' ? 'text-blue-400' : 'text-gray-200'}`}>{t?.lang?.en ?? 'English'}</a>
+          <a href="/hu/" class={`block px-3 py-2 text-sm hover:bg-gray-800 ${lang==='hu' ? 'text-blue-400' : 'text-gray-200'}`}>{t?.lang?.hu ?? 'Hungarian'}</a>
+          <a href="/es/" class={`block px-3 py-2 text-sm hover:bg-gray-800 ${lang==='es' ? 'text-blue-400' : 'text-gray-200'}`}>{t?.lang?.es ?? 'Spanish'}</a>
+        </div>
+      </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "Szilágyi Bence | Fejlesztő és Alkotó | Magyarország",
+    "description": "Szilágyi Bence – fejlesztő és alkotó, aki időtálló, átgondolt megoldásokért rajong. Fedezd fel a projektjeimet, kövess a közösségi médiában, és ismerd meg a munkáimat!",
+    "ogTitle": "Szilágyi Bence | Fejlesztő és Alkotó",
+    "ogDescription": "Szenvedélyes magyar fejlesztő, innovatív projektekkel és eredményekkel"
+  },
+  "common": {
+    "brandInitialsLeft": "Sz",
+    "brandInitialsRight": "B",
+    "repository": "Repo",
+    "resume": "Önéletrajz"
+  },
+  "hero": {
+    "tagline": "Vállalkozó, fejlesztő és bokszoló, határtalan ambícióval."
+  },
+  "about": {
+    "titlePrefix": "Én",
+    "ageCountry": "{age} éves • Magyarország",
+    "passion": "Szenvedélyes fejlesztő, aki kész tanulni és fejlődni",
+    "viewProjects": "Projektek megtekintése",
+    "contactMe": "Kapcsolat",
+    "downloadCV": "Önéletrajz letöltése"
+  },
+  "sections": {
+    "projects": "Projektek",
+    "achievements": "Eredmények",
+    "skills": "Amit építeni tudok",
+    "contact": "Kapcsolat"
+  },
+  "contact": {
+    "cta": "Kapcsolódjunk és építsünk valami nagyszerűt együtt!"
+  },
+  "achievements": {
+    "aocThanks": "Remek rejtvények, köszönet",
+    "round1": "1. forduló",
+    "round2": "2. forduló",
+    "round3": "3. forduló",
+    "final": "Döntő",
+    "aoc": { "title": "Advent of Code - 2022-24" },
+    "bbb": {
+      "title": "Bakonyi Bittfarago Bajnokság - 2022",
+      "subtitle": "Programozóverseny eredmények és minősítések"
+    },
+    "gamf": {
+      "title": "GAMF Programozóverseny - 2021",
+      "subtitle": "Elődöntő és döntő források"
+    }
+  },
+  "skills": {
+    "mobile": "Mobilfejlesztés",
+    "web": "Webfejlesztés",
+    "infra": "Infrastruktúra és DevOps"
+  },
+  "projects": {
+    "trackit": {
+      "subtitle": "Keresztplatformos egészség és fitnesz nyomkövető.",
+      "detail": "Apple HealthKit integráció Swift-tel + PostgreSQL háttérrendszer."
+    },
+    "univerx": {
+      "subtitle": "Az egyetlen egyetemi app, amire szükséged van.",
+      "detail": "Kezeld az óráidat, vizsgáidat és még sok mást."
+    },
+    "smalljs": {
+      "title": "Kis JS projektek - 2023-24",
+      "meridian": "Nap és délkör alapú idő",
+      "typex": "Gyakorold a gépelést",
+      "starlink": "Véletlen Starlink vonatok",
+      "fourd": "Egy 4D objektum 3D vizualizációja",
+      "pi": "A π összes számjegye (vicc)",
+      "kki": "Kreditindex kalkulátor egyetemre"
+    },
+    "leetcode": {
+      "title": "LeetCode Premium Bypass - 2023-24",
+      "subtitle": "Prémium funkciók injektálása exportált adatbázisból.",
+      "detail": "DMCA eltávolítás miatt végleg letiltva."
+    }
+  },
+  "lang": {
+    "current": "Magyar",
+    "en": "Angol",
+    "hu": "Magyar",
+    "es": "Spanyol"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "Bence Szilagyi | Desarrollador y Creador | Hungría",
+    "description": "Bence Szilagyi – desarrollador y creador con pasión por soluciones bien pensadas y duraderas. Explora mis proyectos, conecta en redes sociales y descubre mi trabajo en desarrollo e innovación.",
+    "ogTitle": "Bence Szilagyi | Desarrollador y Creador",
+    "ogDescription": "Desarrollador apasionado de Hungría que muestra proyectos e logros innovadores"
+  },
+  "common": {
+    "brandInitialsLeft": "Sz",
+    "brandInitialsRight": "B",
+    "repository": "Repositorio",
+    "resume": "Currículum"
+  },
+  "hero": {
+    "tagline": "Emprendedor, desarrollador y boxeador con ambición ilimitada."
+  },
+  "about": {
+    "titlePrefix": "Soy",
+    "ageCountry": "{age} años • Hungría",
+    "passion": "Desarrollador apasionado, listo para aprender y evolucionar",
+    "viewProjects": "Ver proyectos",
+    "contactMe": "Contacto",
+    "downloadCV": "Descargar CV"
+  },
+  "sections": {
+    "projects": "Proyectos",
+    "achievements": "Logros",
+    "skills": "Lo que puedo construir",
+    "contact": "Contacto"
+  },
+  "contact": {
+    "cta": "¡Conectemos y construyamos algo increíble juntos!"
+  },
+  "achievements": {
+    "aocThanks": "Acertijos increíbles, gracias a",
+    "round1": "Ronda 1",
+    "round2": "Ronda 2",
+    "round3": "Ronda 3",
+    "final": "Final",
+    "aoc": { "title": "Advent of Code - 2022-24" },
+    "bbb": {
+      "title": "Bakonyi Bittfarago Bajnokság - 2022",
+      "subtitle": "Logros y calificaciones en competición de programación"
+    },
+    "gamf": {
+      "title": "Competencia de Programación GAMF - 2021",
+      "subtitle": "Fuentes de semifinales y final"
+    }
+  },
+  "skills": {
+    "mobile": "Desarrollo móvil",
+    "web": "Desarrollo web",
+    "infra": "Infraestructura y DevOps"
+  },
+  "projects": {
+    "trackit": {
+      "subtitle": "Rastreador de salud y fitness multiplataforma.",
+      "detail": "Integración con Apple HealthKit usando Swift + backend en PostgreSQL."
+    },
+    "univerx": {
+      "subtitle": "La única app universitaria que necesitas.",
+      "detail": "Gestiona tus clases, exámenes y mucho más."
+    },
+    "smalljs": {
+      "title": "Pequeños proyectos JS - 2023-24",
+      "meridian": "Hora basada en el sol y la línea del meridiano",
+      "typex": "Practica tus habilidades de mecanografía",
+      "starlink": "Trenes de Starlink aleatorios",
+      "fourd": "Visualización 3D de un objeto 4D",
+      "pi": "Todos los dígitos de π (broma)",
+      "kki": "Calculadora de índice de créditos para la universidad"
+    },
+    "leetcode": {
+      "title": "LeetCode Premium Bypass - 2023-24",
+      "subtitle": "Inyectando funciones premium desde una base de datos exportada.",
+      "detail": "Debido a una retirada DMCA está deshabilitado permanentemente."
+    }
+  },
+  "lang": {
+    "current": "Español",
+    "en": "Inglés",
+    "hu": "Húngaro",
+    "es": "Español"
+  }
+}

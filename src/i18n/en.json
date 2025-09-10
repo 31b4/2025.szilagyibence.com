@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Bence Szilagyi | Developer & Creator | Hungary",
+    "description": "Bence Szilagyi - Developer & creator with a passion for thoughtfully constructed, timeless solutions. Explore my projects, connect on social media, and discover my work in development and innovation.",
+    "ogTitle": "Bence Szilagyi | Developer & Creator",
+    "ogDescription": "Passionate developer from Hungary showcasing innovative projects and achievements"
+  },
+  "common": {
+    "brandInitialsLeft": "Sz",
+    "brandInitialsRight": "B",
+    "repository": "Repository",
+    "resume": "Resume"
+  },
+  "hero": {
+    "tagline": "Entrepreneur, developer and boxer with unlimited ambition."
+  },
+  "about": {
+    "titlePrefix": "I'm",
+    "ageCountry": "{age} years old • Hungary",
+    "passion": "Passionate developer ready to learn and evolve",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "downloadCV": "Download CV"
+  },
+  "sections": {
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "skills": "What I Can Build",
+    "contact": "Contact Me"
+  },
+  "contact": {
+    "cta": "Let's connect and build something amazing together!"
+  },
+  "achievements": {
+    "aocThanks": "Amazing puzzles, thanks to",
+    "round1": "Round 1",
+    "round2": "Round 2",
+    "round3": "Round 3",
+    "final": "Final",
+    "aoc": {
+      "title": "Advent of Code - 2022-24"
+    },
+    "bbb": {
+      "title": "Bakonyi Bittfarago Bajnokság - 2022",
+      "subtitle": "Programming competition achievements and qualifications"
+    },
+    "gamf": {
+      "title": "GAMF Programming Competition - 2021",
+      "subtitle": "Semifinals and final sources"
+    }
+  },
+  "skills": {
+    "mobile": "Mobile Development",
+    "web": "Web Development",
+    "infra": "Infrastructure & DevOps"
+  },
+  "projects": {
+    "trackit": {
+      "subtitle": "Cross-platform health & fitness tracker.",
+      "detail": "Apple HealthKit integration with Swift + PostgreSQL backend."
+    },
+    "univerx": {
+      "subtitle": "The only university app you need.",
+      "detail": "Manage your classes, exams, and much more."
+    },
+    "smalljs": {
+      "title": "Small JS Projects - 2023-24",
+      "meridian": "Sun, meridian line based time",
+      "typex": "Practice your typing skills",
+      "starlink": "Random Starlink trains",
+      "fourd": "3D visualization of a 4D object",
+      "pi": "All digits of π (jk)",
+      "kki": "Credit Idx Calculator for uni"
+    },
+    "leetcode": {
+      "title": "LeetCode Premium Bypass - 2023-24",
+      "subtitle": "Injecting premium features from an exported database.",
+      "detail": "Due to DMCA takedown it's permanently disabled."
+    }
+  },
+  "lang": {
+    "current": "English",
+    "en": "English",
+    "hu": "Hungarian",
+    "es": "Spanish"
+  }
+}

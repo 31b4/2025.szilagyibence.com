@@ -1,9 +1,10 @@
 ---
+const { t } = Astro.props;
 ---
 <section id="projects" class="py-8 bg-black">
   <div class="container mx-auto px-6">
     <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Projects</span>
+  <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">{t?.sections?.projects ?? 'Projects'}</span>
     </h2>
 
     <div class="space-y-16">
@@ -15,13 +16,13 @@
               TrackIt - 2025
             </a>
           </h3>
-          <p class="text-xl text-gray-300">Cross-platform health & fitness tracker.</p>
-          <p class="text-gray-400">Apple Healthkit integration with Swift + PostgreSQL backend.</p>
+          <p class="text-xl text-gray-300">{t?.projects?.trackit?.subtitle ?? 'Cross-platform health & fitness tracker.'}</p>
+          <p class="text-gray-400">{t?.projects?.trackit?.detail ?? 'Apple HealthKit integration with Swift + PostgreSQL backend.'}</p>
           <div class="flex justify-start lg:justify-end">
             <a href="https://github.com/apptrackit" target="_blank" rel="noopener"
                class="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
               <i class="fa-brands fa-github text-base mr-2"></i>
-              Repository
+              {t?.common?.repository ?? 'Repository'}
             </a>
           </div>
         </div>
@@ -45,12 +46,12 @@
               UniverX - 2024
             </a>
           </h3>
-          <p class="text-xl text-gray-300">The only university App you need.</p>
-          <p class="text-gray-400">Manage your classes, exams and much more.</p>
+          <p class="text-xl text-gray-300">{t?.projects?.univerx?.subtitle ?? 'The only university app you need.'}</p>
+          <p class="text-gray-400">{t?.projects?.univerx?.detail ?? 'Manage your classes, exams, and much more.'}</p>
           <a href="https://github.com/31b4/UniverX" target="_blank" rel="noopener"
              class="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
             <i class="fa-brands fa-github text-base mr-2"></i>
-            Repository
+            {t?.common?.repository ?? 'Repository'}
           </a>
         </div>
       </div>
@@ -59,49 +60,49 @@
 
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 text-left lg:text-right">
-          <h3 class="text-3xl font-bold text-white">Small JS Projects - 2023-24</h3>
+          <h3 class="text-3xl font-bold text-white">{t?.projects?.smalljs?.title ?? 'Small JS Projects - 2023-24'}</h3>
           <div class="space-y-3 text-gray-300">
             <div>
               <a href="https://meridian.szilagyibence.com" target="_blank" rel="noopener"
                  class="text-blue-400 hover:text-blue-300 transition-colors">
                 meridian.szilagyibence.com
               </a>
-              <span class="text-gray-500"> - Sun, meridian line based time</span>
+              <span class="text-gray-500"> - {t?.projects?.smalljs?.meridian ?? 'Sun, meridian line based time'}</span>
             </div>
             <div>
               <a href="https://typex.szilagyibence.com" target="_blank" rel="noopener"
                  class="text-blue-400 hover:text-blue-300 transition-colors">
                 typex.szilagyibence.com
               </a>
-              <span class="text-gray-500"> - Practice your typing skills</span>
+              <span class="text-gray-500"> - {t?.projects?.smalljs?.typex ?? 'Practice your typing skills'}</span>
             </div>
             <div>
               <a href="https://starlink.szilagyibence.com" target="_blank" rel="noopener"
                  class="text-blue-400 hover:text-blue-300 transition-colors">
                 starlink.szilagyibence.com
               </a>
-              <span class="text-gray-500"> - Random starlink trains</span>
+              <span class="text-gray-500"> - {t?.projects?.smalljs?.starlink ?? 'Random Starlink trains'}</span>
             </div>
             <div>
               <a href="https://4d.szilagyibence.com" target="_blank" rel="noopener"
                  class="text-blue-400 hover:text-blue-300 transition-colors">
                 4d.szilagyibence.com
               </a>
-              <span class="text-gray-500"> - 3d visualization of a 4d object</span>
+              <span class="text-gray-500"> - {t?.projects?.smalljs?.fourd ?? '3D visualization of a 4D object'}</span>
             </div>
             <div>
               <a href="https://pi.szilagyibence.com" target="_blank" rel="noopener"
                  class="text-blue-400 hover:text-blue-300 transition-colors">
                 pi.szilagyibence.com
               </a>
-              <span class="text-gray-500"> - All digits of π (jk)</span>
+              <span class="text-gray-500"> - {t?.projects?.smalljs?.pi ?? 'All digits of π (jk)'}</span>
             </div>
             <div>
               <a href="https://kki.szilagyibence.com" target="_blank" rel="noopener"
                  class="text-blue-400 hover:text-blue-300 transition-colors">
                 kki.szilagyibence.com
               </a>
-              <span class="text-gray-500"> - Credit Idx Calculator for uni</span>
+              <span class="text-gray-500"> - {t?.projects?.smalljs?.kki ?? 'Credit Idx Calculator for uni'}</span>
             </div>
           </div>
         </div>
@@ -126,15 +127,15 @@
           <h3 class="text-3xl font-bold">
             <a href="https://github.com/31b4/Leetcode-Premium-Bypass" target="_blank" rel="noopener"
                class="text-white hover:text-blue-400 transition-colors">
-              LeetCode Premium Bypass - 2023-24
+        {t?.projects?.leetcode?.title ?? 'LeetCode Premium Bypass - 2023-24'}
             </a>
           </h3>
-          <p class="text-xl text-gray-300">Injecting premium features from an exported database.</p>
-          <p class="text-gray-400">Due to DMCA takedown its permanently disabled.</p>
+      <p class="text-xl text-gray-300">{t?.projects?.leetcode?.subtitle ?? 'Injecting premium features from an exported database.'}</p>
+      <p class="text-gray-400">{t?.projects?.leetcode?.detail ?? "Due to DMCA takedown it's permanently disabled."}</p>
           <a href="https://github.com/31b4/Leetcode-Premium-Bypass" target="_blank" rel="noopener"
              class="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
             <i class="fa-brands fa-github text-base mr-2"></i>
-            Repository
+            {t?.common?.repository ?? 'Repository'}
           </a>
         </div>
       </div>
