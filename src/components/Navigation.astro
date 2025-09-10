@@ -1,0 +1,146 @@
+---
+
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo/Brand -->
+      <div class="flex items-center">
+        <a href="/" class="text-2xl font-bold gradient-text hover:scale-105 transition-transform">
+          BS
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-btn" 
+        class="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
+        aria-label="Toggle mobile menu"
+      >
+        <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300 mobile-menu-line-1"></span>
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300 mobile-menu-line-2"></span>
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300 mobile-menu-line-3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden bg-slate-950/95 backdrop-blur-lg border-t border-white/10 transform -translate-y-full transition-transform duration-300">
+    <div class="px-6 py-8 space-y-6">
+      <a href="#about" class="block text-lg hover:text-blue-400 transition-colors mobile-nav-link">About</a>
+      <a href="#projects" class="block text-lg hover:text-blue-400 transition-colors mobile-nav-link">Projects</a>
+      <a href="#skills" class="block text-lg hover:text-blue-400 transition-colors mobile-nav-link">Skills</a>
+      <a href="#contact" class="block text-lg hover:text-blue-400 transition-colors mobile-nav-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav-link {
+    @apply relative text-slate-300 hover:text-white transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .mobile-menu-active .mobile-menu-line-1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-menu-active .mobile-menu-line-2 {
+    opacity: 0;
+  }
+
+  .mobile-menu-active .mobile-menu-line-3 {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+</style>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  let isMenuOpen = false;
+
+  function toggleMobileMenu() {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      mobileMenuBtn?.classList.add('mobile-menu-active');
+      mobileMenu?.classList.remove('-translate-y-full');
+      mobileMenu?.classList.add('translate-y-0');
+    } else {
+      mobileMenuBtn?.classList.remove('mobile-menu-active');
+      mobileMenu?.classList.add('-translate-y-full');
+      mobileMenu?.classList.remove('translate-y-0');
+    }
+  }
+
+  mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
+
+  // Close mobile menu when clicking on nav links
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMenuOpen) {
+        toggleMobileMenu();
+      }
+    });
+  });
+
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const offsetTop = target.offsetTop - 80; // Account for fixed nav height
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Add scroll effect to navigation
+  let lastScrollY = window.scrollY;
+  const nav = document.querySelector('nav');
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Scrolling down
+      nav?.classList.add('-translate-y-full');
+    } else {
+      // Scrolling up
+      nav?.classList.remove('-translate-y-full');
+    }
+    
+    lastScrollY = currentScrollY;
+  });
+</script>
