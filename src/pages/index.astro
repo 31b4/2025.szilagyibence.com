@@ -39,13 +39,29 @@ const pageTitle = t.meta?.title ?? "Bence Szilagyi | Developer & Creator | Hunga
     <link rel="alternate" hreflang="en" href="https://szilagyibence.com/" />
     <link rel="alternate" hreflang="hu" href="https://szilagyibence.com/hu/" />
     <link rel="alternate" hreflang="es" href="https://szilagyibence.com/es/" />
-    <link rel="alternate" hreflang="x-default" href="https://szilagyibence.com/" />
+  <link rel="alternate" hreflang="zh" href="https://szilagyibence.com/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://szilagyibence.com/ja/" />
+  <link rel="alternate" hreflang="hi" href="https://szilagyibence.com/hi/" />
+  <link rel="alternate" hreflang="fr" href="https://szilagyibence.com/fr/" />
+  <link rel="alternate" hreflang="ar" href="https://szilagyibence.com/ar/" />
+  <link rel="alternate" hreflang="ru" href="https://szilagyibence.com/ru/" />
+  <link rel="alternate" hreflang="pt" href="https://szilagyibence.com/pt/" />
+  <link rel="alternate" hreflang="id" href="https://szilagyibence.com/id/" />
+  <link rel="alternate" hreflang="x-default" href="https://szilagyibence.com/" />
+  <!-- Non-standard pseudo-locale for debugging -->
+  <link rel="alternate" hreflang="x-ascii" href="https://szilagyibence.com/ascii/" />
+  <link rel="alternate" hreflang="x-morse" href="https://szilagyibence.com/morse/" />
+  <link rel="alternate" hreflang="x-binary" href="https://szilagyibence.com/binary/" />
+  <link rel="alternate" hreflang="x-hex" href="https://szilagyibence.com/hex/" />
+  <link rel="alternate" hreflang="x-hier" href="https://szilagyibence.com/hier/" />
+  <link rel="alternate" hreflang="x-braille" href="https://szilagyibence.com/braille/" />
+  <link rel="alternate" hreflang="x-asl" href="https://szilagyibence.com/asl/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <script is:inline>
       (function(){
-        var supported = ['en','hu','es'];
+  var supported = ['en','hu','es','zh','ja','hi','fr','ar','ru','pt','id'];
         var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en']).map(function(l){return l.toLowerCase();});
         var pick = 'en';
         for (var i=0;i<langs.length;i++) {

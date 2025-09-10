@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "Bence Szilagyi | 开发者与创作者 | 匈牙利",
+    "description": "Bence Szilagyi —— 热衷于深思熟虑、经久耐用的解决方案的开发者与创作者。浏览我的项目，社媒联系，了解我在开发与创新方面的工作。",
+    "ogTitle": "Bence Szilagyi | 开发者与创作者",
+    "ogDescription": "来自匈牙利的热情开发者，展示创新项目与成就"
+  },
+  "common": {
+    "brandInitialsLeft": "Sz",
+    "brandInitialsRight": "B",
+    "repository": "仓库",
+    "resume": "简历"
+  },
+  "hero": {
+    "tagline": "具有无限雄心的创业者、开发者与拳击爱好者。"
+  },
+  "about": {
+    "titlePrefix": "我是",
+    "ageCountry": "{age} 岁 • 匈牙利",
+    "passion": "热爱学习与持续进步的开发者",
+    "viewProjects": "查看项目",
+    "contactMe": "联系我",
+    "downloadCV": "下载简历"
+  },
+  "sections": {
+    "projects": "项目",
+    "achievements": "成就",
+    "skills": "我能构建什么",
+    "contact": "联系我"
+  },
+  "contact": {
+    "cta": "一起连接，共同创造出色的作品！"
+  },
+  "achievements": {
+    "aocThanks": "精彩的谜题，感谢",
+    "round1": "第1轮",
+    "round2": "第2轮",
+    "round3": "第3轮",
+    "final": "决赛",
+    "aoc": { "title": "Advent of Code - 2022-24" },
+    "bbb": { "title": "Bakonyi Bittfarago Bajnokság - 2022", "subtitle": "编程竞赛的成绩与资格" },
+    "gamf": { "title": "GAMF 编程竞赛 - 2021", "subtitle": "半决赛与决赛源码" }
+  },
+  "skills": {
+    "mobile": "移动开发",
+    "web": "Web 开发",
+    "infra": "基础设施与 DevOps"
+  },
+  "projects": {
+    "trackit": {
+      "subtitle": "跨平台健康与健身追踪。",
+      "detail": "基于 Swift + PostgreSQL 后端，集成 Apple HealthKit。"
+    },
+    "univerx": {
+      "subtitle": "你所需的一站式校园应用。",
+      "detail": "管理课程、考试以及更多内容。"
+    },
+    "smalljs": {
+      "title": "小型 JS 项目 - 2023-24",
+      "meridian": "基于太阳与子午线的时间",
+      "typex": "练习你的打字技能",
+      "starlink": "随机 Starlink 车队",
+      "fourd": "4D 物体的 3D 可视化",
+      "pi": "π 的所有数字（开个玩笑）",
+      "kki": "大学学分指数计算器"
+    },
+    "leetcode": {
+      "title": "LeetCode Premium Bypass - 2023-24",
+      "subtitle": "从导出的数据库中注入会员功能。",
+      "detail": "因 DMCA 投诉已被永久禁用。"
+    }
+  },
+  "lang": {
+    "current": "中文",
+    "en": "英语",
+    "hu": "匈牙利语",
+    "es": "西班牙语",
+    "zh": "中文"
+  }
+}

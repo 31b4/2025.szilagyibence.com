@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Bence Szilagyi | Développeur & Créateur | Hongrie",
+    "description": "Bence Szilagyi — développeur et créateur passionné par des solutions réfléchies et durables. Découvrez mes projets, connectez-vous sur les réseaux, et explorez mon travail en développement et innovation.",
+    "ogTitle": "Bence Szilagyi | Développeur & Créateur",
+    "ogDescription": "Développeur passionné de Hongrie présentant des projets et réalisations innovants"
+  },
+  "common": { "brandInitialsLeft": "Sz", "brandInitialsRight": "B", "repository": "Dépôt", "resume": "CV" },
+  "hero": { "tagline": "Entrepreneur, développeur et boxeur à l’ambition sans limites." },
+  "about": {
+    "titlePrefix": "Je suis",
+    "ageCountry": "{age} ans • Hongrie",
+    "passion": "Développeur passionné, prêt à apprendre et évoluer",
+    "viewProjects": "Voir les projets",
+    "contactMe": "Me contacter",
+    "downloadCV": "Télécharger le CV"
+  },
+  "sections": { "projects": "Projets", "achievements": "Réalisations", "skills": "Ce que je peux construire", "contact": "Contact" },
+  "contact": { "cta": "Connectons-nous et bâtissons quelque chose d’extraordinaire !" },
+  "achievements": {
+    "aocThanks": "Énigmes incroyables, merci à",
+    "round1": "Manche 1",
+    "round2": "Manche 2",
+    "round3": "Manche 3",
+    "final": "Finale",
+    "aoc": { "title": "Advent of Code - 2022-24" },
+    "bbb": { "title": "Bakonyi Bittfarago Bajnokság - 2022", "subtitle": "Résultats et qualifications de concours de programmation" },
+    "gamf": { "title": "Concours de programmation GAMF - 2021", "subtitle": "Sources des demi-finales et de la finale" }
+  },
+  "skills": { "mobile": "Développement mobile", "web": "Développement web", "infra": "Infrastructure & DevOps" },
+  "projects": {
+    "trackit": { "subtitle": "Suivi santé et fitness multiplateforme.", "detail": "Intégration Apple HealthKit avec Swift + backend PostgreSQL." },
+    "univerx": { "subtitle": "La seule application universitaire dont vous avez besoin.", "detail": "Gérez vos cours, examens et bien plus." },
+    "smalljs": {
+      "title": "Petits projets JS - 2023-24",
+      "meridian": "Heure basée sur le soleil et le méridien",
+      "typex": "Entraînez votre frappe au clavier",
+      "starlink": "Trains Starlink aléatoires",
+      "fourd": "Visualisation 3D d’un objet 4D",
+      "pi": "Tous les chiffres de π (plaisanterie)",
+      "kki": "Calculateur d’indice de crédits universitaire"
+    },
+    "leetcode": { "title": "LeetCode Premium Bypass - 2023-24", "subtitle": "Injection de fonctionnalités premium depuis une base exportée.", "detail": "Désactivé définitivement suite à une requête DMCA." }
+  },
+  "lang": { "current": "Français", "en": "Anglais", "hu": "Hongrois", "es": "Espagnol", "zh": "中文", "ja": "日本語", "hi": "हिंदी", "fr": "Français", "ar": "Arabe", "ru": "Russe", "pt": "Portugais", "id": "Indonésien" }
+}

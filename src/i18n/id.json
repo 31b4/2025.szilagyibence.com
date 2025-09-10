@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Bence Szilagyi | Pengembang & Kreator | Hungaria",
+    "description": "Bence Szilagyi — pengembang dan kreator yang bersemangat pada solusi yang matang dan tahan lama. Jelajahi proyek saya, terhubung di media sosial, dan kenali karya saya dalam pengembangan dan inovasi.",
+    "ogTitle": "Bence Szilagyi | Pengembang & Kreator",
+    "ogDescription": "Pengembang penuh semangat dari Hungaria menampilkan proyek dan pencapaian inovatif"
+  },
+  "common": { "brandInitialsLeft": "Sz", "brandInitialsRight": "B", "repository": "Repositori", "resume": "CV" },
+  "hero": { "tagline": "Wirausahawan, pengembang, dan petinju dengan ambisi tanpa batas." },
+  "about": {
+    "titlePrefix": "Saya",
+    "ageCountry": "{age} tahun • Hungaria",
+    "passion": "Pengembang yang bersemangat, siap belajar dan berkembang",
+    "viewProjects": "Lihat proyek",
+    "contactMe": "Kontak",
+    "downloadCV": "Unduh CV"
+  },
+  "sections": { "projects": "Proyek", "achievements": "Pencapaian", "skills": "Apa yang bisa saya bangun", "contact": "Kontak" },
+  "contact": { "cta": "Ayo terhubung dan bangun sesuatu yang luar biasa bersama!" },
+  "achievements": {
+    "aocThanks": "Teka-teki yang luar biasa, terima kasih kepada",
+    "round1": "Ronde 1",
+    "round2": "Ronde 2",
+    "round3": "Ronde 3",
+    "final": "Final",
+    "aoc": { "title": "Advent of Code - 2022-24" },
+    "bbb": { "title": "Bakonyi Bittfarago Bajnokság - 2022", "subtitle": "Pencapaian dan kualifikasi kompetisi pemrograman" },
+    "gamf": { "title": "Kompetisi Pemrograman GAMF - 2021", "subtitle": "Sumber semifinal dan final" }
+  },
+  "skills": { "mobile": "Pengembangan Mobile", "web": "Pengembangan Web", "infra": "Infrastruktur & DevOps" },
+  "projects": {
+    "trackit": { "subtitle": "Pelacak kesehatan & kebugaran lintas platform.", "detail": "Integrasi Apple HealthKit dengan Swift + backend PostgreSQL." },
+    "univerx": { "subtitle": "Satu-satunya aplikasi kampus yang Anda butuhkan.", "detail": "Kelola kelas, ujian, dan banyak lagi." },
+    "smalljs": {
+      "title": "Proyek JS kecil - 2023-24",
+      "meridian": "Waktu berbasis matahari dan garis meridian",
+      "typex": "Latih kemampuan mengetik Anda",
+      "starlink": "Rangkaian Starlink acak",
+      "fourd": "Visualisasi 3D dari objek 4D",
+      "pi": "Semua digit π (candaan)",
+      "kki": "Kalkulator indeks kredit untuk universitas"
+    },
+    "leetcode": { "title": "LeetCode Premium Bypass - 2023-24", "subtitle": "Menyuntikkan fitur premium dari basis data yang diekspor.", "detail": "Dinonaktifkan permanen karena DMCA." }
+  },
+  "lang": { "current": "Bahasa Indonesia", "en": "English", "hu": "Hungarian", "es": "Spanish", "zh": "中文", "ja": "日本語", "hi": "हिंदी", "fr": "Français", "ar": "العربية", "ru": "Русский", "pt": "Português", "id": "Bahasa Indonesia" }
+}

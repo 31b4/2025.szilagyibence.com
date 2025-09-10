@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "𓊪𓇯𓇰",
+    "projects": "𓈖𓅓𓏲𓊃𓈖𓅱",
+    "resume": "𓂸𓏲𓈖𓊪𓇯"
+  },
+  "common": {
+    "brandInitialsLeft": "𓃀𓄿",
+    "brandInitialsRight": "𓃭𓃭",
+    "repository": "𓎼𓇋𓏏𓍿𓌨𓃀",
+    "resume": "𓂸𓏲𓈖𓊪𓇯"
+  },
+  "hero": {
+    "tagline": "𓈙𓃀𓈖𓈖 𓇋𓋴 𓊪𓂋𓃀𓈖"
+  },
+  "about": {
+    "titlePrefix": "𓃀𓄿𓃭𓃭𓄿",
+    "ageCountry": "{age} 𓇋𓅱𓈖𓂧 • 𓉔𓅱𓈖𓎼𓅱𓃭𓇋",
+    "passion": "𓋴𓈖𓍲𓈖 𓂧𓇋𓄿𓃭𓅱𓊪𓇯 𓇋𓈖 𓇋𓈖𓈖𓅱𓄛𓄿𓏏𓇋",
+    "viewProjects": "𓈖𓅓𓏲𓊃𓈖𓅱",
+    "contactMe": "𓊪𓇯𓅱𓎢𓇋𓈖𓏏𓏤",
+    "downloadCV": "𓂸𓏲𓈖𓊪𓇯 𓊪𓇯𓅱𓏏"
+  },
+  "sections": {
+    "projects": "𓈖𓅓𓏲𓊃𓈖𓅱",
+    "achievements": "𓊪𓄿𓋴𓋴𓇋𓅱𓈖",
+    "skills": "𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓",
+    "contact": "𓊪𓇯𓅱𓎢𓇋𓈖𓏏𓏤"
+  },
+  "contact": {
+    "cta": "𓄋𓌨𓊪𓃭𓅱𓇯 𓊃𓇋 𓊪𓇯𓅱𓎢..."
+  },
+  "achievements": {
+    "aocThanks": "𓊪𓄿𓋴𓋴𓇋𓅱𓈖 𓇋𓅱 𓇋𓄿𓎡𓇋",
+    "round1": "𓇋",
+    "round2": "𓇋𓇋",
+    "round3": "𓇋𓇋𓇋",
+    "final": "𓏏",
+    "aoc": { "title": "𓄿𓂧𓄿𓇋𓇋𓄿𓈖𓏏 𓅱𓈖 𓂧 𓎡𓇋𓂧 - 2022-24" },
+    "bbb": { "title": "𓃀𓄿𓎡𓅱𓈖𓇋 𓃀𓇋𓏏𓏏𓆑𓂝𓃭𓃭 𓃀𓄿𓇋𓇋𓈖𓃭𓋴𓋴𓎼 - 2022", "subtitle": "𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 𓈖𓂧 𓎡𓇋𓍲𓅱𓈖𓂧𓄿𓏏𓇋𓅱" },
+    "gamf": { "title": "GAMF 𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 - 2021", "subtitle": "𓋴𓇋𓅱𓎡𓇋𓂧 𓈖𓂧 𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 𓄿𓅱𓈖𓂧 𓊃𓇋"
+    }
+  },
+  "skills": {
+    "mobile": "𓅟𓇋𓃀𓋴𓇋𓏏 𓂧𓇋𓌨𓇋𓈖",
+    "web": "𓇋𓈖𓈖𓅱𓄛𓄿𓏏𓇋 𓂧𓇋𓌨𓇋𓈖",
+    "infra": "𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 & 𓂧𓇋𓎼𓅱𓊪𓋴"
+  },
+  "projects": {
+    "trackit": {
+      "subtitle": "𓄿𓅱𓃭 𓂧𓇋𓄿𓃭𓅱𓊪𓇯 𓅱𓈖 𓊪𓇯𓅱𓎢𓇋𓈖𓏏𓏤 𓅱𓇯𓃭𓂧.",
+      "detail": "Apple HealthKit 𓇋𓈖𓇯𓈖𓏲 𓋴𓇋𓏏𓆑𓏏 + PostgreSQL 𓃀𓇋𓍿𓏏𓅱𓈖𓂧."
+    },
+    "univerx": {
+      "subtitle": "𓄿𓅱𓃭 𓅱𓇯𓃭𓂧 𓂧 𓅱𓈖𓇋𓅱𓇯𓏏𓅱 𓄿𓅱𓃭 𓇋𓈖𓂧.",
+      "detail": "𓅱𓇯𓃭𓂧 𓇋𓈖 𓇋𓅱𓏏𓇋𓍿, 𓇋𓏏𓆑𓏏, 𓄿𓇋𓅱 𓅱𓇯𓃭𓂧."
+    },
+    "smalljs": {
+      "title": "Small JS Projects - 2023-24",
+      "meridian": "𓇋𓏏𓆑𓏏, 𓅱𓇯𓃭 𓇋𓈖 𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓",
+      "typex": "𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 𓇋𓈖 𓏏𓇋𓎡",
+      "starlink": "𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 Starlink",
+      "fourd": "4D 𓇋𓏏𓆑𓏏 𓄿𓇋𓅱 𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓",
+      "pi": "𓄿𓅱𓃭 𓂧𓇋𓄿𓃭𓅱𓊪𓇯 π (jk)",
+      "kki": "𓎡𓎡𓇋 𓂧𓇋𓎼𓅱𓊪𓋴 𓇋𓈖 𓇋𓅱𓈖𓇋"
+    },
+    "leetcode": {
+      "title": "LeetCode Premium Bypass - 2023-24",
+      "subtitle": "𓇋𓈖𓇯𓈖𓏲 𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 𓅱𓈖 𓄿𓅱𓃭 𓆑𓇋𓏏𓇋𓍿 𓂧𓇋𓃀𓄿𓋴𓏏𓇋𓍿.",
+      "detail": "DMCA 𓂧𓇋𓃀𓄿𓋴𓏏𓇋𓍿 𓇋𓈖 𓂧𓇋𓃀𓄿𓋴𓏏𓇋𓍿 𓍯𓇋𓏏𓏏 𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 𓇋𓈖 𓂧𓇋𓍿𓇋𓇋."
+    }
+  },
+  "lang": {
+    "current": "𓃀𓄿𓃭𓃭𓄿",
+    "en": "𓇋𓈖𓅓𓏏𓇋𓍿",
+    "hu": "𓉔𓅱𓈖𓎼𓅱𓃭𓇋",
+    "es": "𓋴𓊪𓄿𓈖𓋴𓇋𓏏",
+    "zh": "𓍿𓇋𓇋𓋴𓇋",
+    "ja": "𓆓𓄿𓇋𓇋𓇋𓇋",
+    "hi": "𓎛𓇋𓅱𓏏𓇋",
+    "fr": "𓊪𓃭𓇋𓇯𓋴𓋴",
+    "ar": "𓄿𓃭𓄿𓃀𓇋𓂧𓇋𓇋",
+    "ru": "𓃭𓅱𓎡𓄿𓋴𓋴",
+    "pt": "𓊪𓅱𓏏𓇋𓇋𓇋",
+    "id": "𓇋𓂧𓇋𓇋𓇋",
+    "ascii": "ASCII",
+    "morse": "Morse",
+    "binary": "Binary",
+    "hex": "Hex",
+    "hier": "Hieroglyphs",
+    "braille": "Braille"
+  }
+}

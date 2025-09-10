@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Bence Szilagyi | Desenvolvedor e Criador | Hungria",
+    "description": "Bence Szilagyi — desenvolvedor e criador apaixonado por soluções bem pensadas e duradouras. Explore meus projetos, conecte-se nas redes e conheça meu trabalho em desenvolvimento e inovação.",
+    "ogTitle": "Bence Szilagyi | Desenvolvedor e Criador",
+    "ogDescription": "Desenvolvedor apaixonado da Hungria apresentando projetos e conquistas inovadoras"
+  },
+  "common": { "brandInitialsLeft": "Sz", "brandInitialsRight": "B", "repository": "Repositório", "resume": "Currículo" },
+  "hero": { "tagline": "Empreendedor, desenvolvedor e boxeador com ambição ilimitada." },
+  "about": {
+    "titlePrefix": "Eu sou",
+    "ageCountry": "{age} anos • Hungria",
+    "passion": "Desenvolvedor apaixonado, pronto para aprender e evoluir",
+    "viewProjects": "Ver projetos",
+    "contactMe": "Contato",
+    "downloadCV": "Baixar CV"
+  },
+  "sections": { "projects": "Projetos", "achievements": "Conquistas", "skills": "O que posso construir", "contact": "Contato" },
+  "contact": { "cta": "Vamos nos conectar e construir algo incrível juntos!" },
+  "achievements": {
+    "aocThanks": "Quebra-cabeças incríveis, obrigado a",
+    "round1": "Rodada 1",
+    "round2": "Rodada 2",
+    "round3": "Rodada 3",
+    "final": "Final",
+    "aoc": { "title": "Advent of Code - 2022-24" },
+    "bbb": { "title": "Bakonyi Bittfarago Bajnokság - 2022", "subtitle": "Resultados e qualificações de competição de programação" },
+    "gamf": { "title": "Competição de Programação GAMF - 2021", "subtitle": "Fontes das semifinais e final" }
+  },
+  "skills": { "mobile": "Desenvolvimento mobile", "web": "Desenvolvimento web", "infra": "Infraestrutura e DevOps" },
+  "projects": {
+    "trackit": { "subtitle": "Rastreador de saúde e fitness multiplataforma.", "detail": "Integração Apple HealthKit com Swift + backend PostgreSQL." },
+    "univerx": { "subtitle": "O único app universitário que você precisa.", "detail": "Gerencie suas aulas, provas e muito mais." },
+    "smalljs": {
+      "title": "Pequenos projetos JS - 2023-24",
+      "meridian": "Hora baseada no sol e na linha do meridiano",
+      "typex": "Pratique sua digitação",
+      "starlink": "Trens Starlink aleatórios",
+      "fourd": "Visualização 3D de um objeto 4D",
+      "pi": "Todos os dígitos de π (brincadeira)",
+      "kki": "Calculadora de índice de créditos para a universidade"
+    },
+    "leetcode": { "title": "LeetCode Premium Bypass - 2023-24", "subtitle": "Injeção de recursos premium a partir de um banco exportado.", "detail": "Desativado permanentemente devido a DMCA." }
+  },
+  "lang": { "current": "Português", "en": "Inglês", "hu": "Húngaro", "es": "Espanhol", "zh": "中文", "ja": "日本語", "hi": "हिंदी", "fr": "Français", "ar": "العربية", "ru": "Русский", "pt": "Português", "id": "Bahasa Indonesia" }
+}
