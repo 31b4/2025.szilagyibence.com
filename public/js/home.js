@@ -1,6 +1,6 @@
 // Age calculation
 function updateAge() {
-  const birthDate = new Date('2004-01-01');
+  const birthDate = new Date('2005-01-04');
   const today = new Date();
   const age = Math.floor((today.getTime() - birthDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000));
   const ageElement = document.getElementById('age-display');
