@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Bence Szilagyi | 開発者・クリエイター | ハンガリー",
+    "description": "Bence Szilagyi — 考え抜かれた長く使えるソリューションを追求する開発者・クリエイター。プロジェクトの紹介や SNS での連絡、開発・イノベーションの取り組みをご覧ください。",
+    "ogTitle": "Bence Szilagyi | 開発者・クリエイター",
+    "ogDescription": "ハンガリー出身の熱意ある開発者。革新的なプロジェクトと実績を紹介"
+  },
+  "common": { "brandInitialsLeft": "Sz", "brandInitialsRight": "B", "repository": "リポジトリ", "resume": "履歴書" },
+  "hero": { "tagline": "無限の野心を持つ起業家・開発者・ボクサー。" },
+  "about": {
+    "titlePrefix": "私は",
+    "ageCountry": "{age} 歳 • ハンガリー",
+    "passion": "学び続け成長し続ける情熱的な開発者",
+    "viewProjects": "プロジェクトを見る",
+    "contactMe": "連絡する",
+    "downloadCV": "履歴書をダウンロード"
+  },
+  "sections": { "projects": "プロジェクト", "achievements": "実績", "skills": "できること", "contact": "連絡" },
+  "contact": { "cta": "一緒に素晴らしいものを作りましょう！" },
+  "achievements": {
+    "aocThanks": "素晴らしいパズル、感謝",
+    "round1": "第1ラウンド",
+    "round2": "第2ラウンド",
+    "round3": "第3ラウンド",
+    "final": "決勝",
+    "aoc": { "title": "Advent of Code - 2022-24" },
+    "bbb": { "title": "Bakonyi Bittfarago Bajnokság - 2022", "subtitle": "プログラミング大会の成績と資格" },
+    "gamf": { "title": "GAMF プログラミングコンテスト - 2021", "subtitle": "準決勝と決勝のソース" }
+  },
+  "skills": { "mobile": "モバイル開発", "web": "Web 開発", "infra": "インフラ・DevOps" },
+  "projects": {
+    "trackit": { "subtitle": "クロスプラットフォームのヘルス＆フィットネストラッカー。", "detail": "Swift + PostgreSQL バックエンドに Apple HealthKit を統合。" },
+    "univerx": { "subtitle": "大学生活に必要な機能を一つに。", "detail": "授業や試験などをまとめて管理。" },
+    "smalljs": {
+      "title": "小さな JS プロジェクト - 2023-24",
+      "meridian": "太陽と子午線に基づく時刻",
+      "typex": "タイピング練習",
+      "starlink": "ランダムな Starlink 列車",
+      "fourd": "4D オブジェクトの 3D 可視化",
+      "pi": "π の全桁（ジョーク）",
+      "kki": "大学向けクレジット指数計算機"
+    },
+    "leetcode": { "title": "LeetCode Premium Bypass - 2023-24", "subtitle": "エクスポートした DB からプレミアム機能を注入。", "detail": "DMCA により恒久的に無効化。" }
+  },
+  "lang": { "current": "日本語", "en": "英語", "hu": "ハンガリー語", "es": "スペイン語", "zh": "中国語", "ja": "日本語", "hi": "ヒンディー語", "fr": "フランス語", "ar": "アラビア語", "ru": "ロシア語", "pt": "ポルトガル語", "id": "インドネシア語" }
+}

@@ -1,9 +1,24 @@
 ---
 const { t, lang = "en" } = Astro.props;
 const locales = [
-  { code: "en", label: t?.lang?.en ?? "EN" },
-  { code: "hu", label: t?.lang?.hu ?? "HU" },
-  { code: "es", label: t?.lang?.es ?? "ES" }
+  { code: "en", label: t?.lang?.en ?? "English", flag: "🇬🇧" },
+  { code: "hu", label: t?.lang?.hu ?? "Hungarian", flag: "🇭🇺" },
+  { code: "es", label: t?.lang?.es ?? "Spanish", flag: "🇪🇸" },
+  { code: "zh", label: t?.lang?.zh ?? "中文", flag: "🇨🇳" },
+  { code: "ja", label: t?.lang?.ja ?? "日本語", flag: "🇯🇵" },
+  { code: "hi", label: t?.lang?.hi ?? "हिंदी", flag: "🇮🇳" },
+  { code: "fr", label: t?.lang?.fr ?? "Français", flag: "🇫🇷" },
+  { code: "ar", label: t?.lang?.ar ?? "العربية", flag: "🇸🇦" },
+  { code: "ru", label: t?.lang?.ru ?? "Русский", flag: "🇷🇺" },
+  { code: "pt", label: t?.lang?.pt ?? "Português", flag: "🇵🇹" },
+  { code: "id", label: t?.lang?.id ?? "Bahasa Indonesia", flag: "🇮🇩" },
+  { code: "ascii", label: "ASCII", flag: "🔣" },
+  { code: "binary", label: "Binary", flag: "010" },
+  { code: "hex", label: "Hex", flag: "0x" },
+  { code: "hier", label: "Hieroglyphs", flag: "𓀀" },
+  { code: "braille", label: "Braille", flag: "⠿" },
+  { code: "asl", label: "Sign (Hands)", flag: "🤟" },
+  { code: "morse", label: "Morse", flag: "•−" }
 ];
 ---
 <nav id="navbar" class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800/50 transition-transform duration-300">
@@ -35,10 +50,25 @@ const locales = [
         <button class="p-2 rounded hover:bg-gray-800/70 text-gray-300" aria-label="Language" onclick="this.nextElementSibling.classList.toggle('hidden')">
           <i class="fa-solid fa-globe text-xl"></i>
         </button>
-        <div class="absolute right-0 mt-2 w-40 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hidden">
-          <a href="/" class={`block px-3 py-2 text-sm hover:bg-gray-800 ${lang==='en' ? 'text-blue-400' : 'text-gray-200'}`}>{t?.lang?.en ?? 'English'}</a>
-          <a href="/hu/" class={`block px-3 py-2 text-sm hover:bg-gray-800 ${lang==='hu' ? 'text-blue-400' : 'text-gray-200'}`}>{t?.lang?.hu ?? 'Hungarian'}</a>
-          <a href="/es/" class={`block px-3 py-2 text-sm hover:bg-gray-800 ${lang==='es' ? 'text-blue-400' : 'text-gray-200'}`}>{t?.lang?.es ?? 'Spanish'}</a>
+        <div class="absolute right-0 mt-2 w-52 bg-gray-900 border border-gray-700 rounded-lg shadow-lg overflow-hidden hidden max-h-80 overflow-y-auto">
+          <a href="/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='en' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇬🇧</span><span>{t?.lang?.en ?? 'English'}</span></a>
+          <a href="/hu/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='hu' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇭🇺</span><span>{t?.lang?.hu ?? 'Hungarian'}</span></a>
+          <a href="/es/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='es' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇪🇸</span><span>{t?.lang?.es ?? 'Spanish'}</span></a>
+          <a href="/zh/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='zh' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇨🇳</span><span>{t?.lang?.zh ?? '中文'}</span></a>
+          <a href="/ja/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='ja' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇯🇵</span><span>{t?.lang?.ja ?? '日本語'}</span></a>
+          <a href="/hi/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='hi' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇮🇳</span><span>{t?.lang?.hi ?? 'हिंदी'}</span></a>
+          <a href="/fr/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='fr' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇫🇷</span><span>{t?.lang?.fr ?? 'Français'}</span></a>
+          <a href="/ar/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='ar' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇸🇦</span><span>{t?.lang?.ar ?? 'العربية'}</span></a>
+          <a href="/ru/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='ru' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇷🇺</span><span>{t?.lang?.ru ?? 'Русский'}</span></a>
+          <a href="/pt/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='pt' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇵🇹</span><span>{t?.lang?.pt ?? 'Português'}</span></a>
+          <a href="/id/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='id' ? 'text-blue-400' : 'text-gray-200'}`}><span>🇮🇩</span><span>{t?.lang?.id ?? 'Bahasa Indonesia'}</span></a>
+          <a href="/ascii/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='ascii' ? 'text-blue-400' : 'text-gray-200'}`}><span>🔣</span><span>ASCII</span></a>
+          <a href="/binary/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='binary' ? 'text-blue-400' : 'text-gray-200'}`}><span>010</span><span>Binary</span></a>
+          <a href="/hex/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='hex' ? 'text-blue-400' : 'text-gray-200'}`}><span>0x</span><span>Hex</span></a>
+          <a href="/hier/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='hier' ? 'text-blue-400' : 'text-gray-200'}`}><span>𓀀</span><span>Hieroglyphs</span></a>
+          <a href="/braille/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='braille' ? 'text-blue-400' : 'text-gray-200'}`}><span>⠿</span><span>Braille</span></a>
+          <a href="/asl/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='asl' ? 'text-blue-400' : 'text-gray-200'}`}><span>🤟</span><span>Sign (ASL Gloss)</span></a>
+          <a href="/morse/" class={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-800 ${lang==='morse' ? 'text-blue-400' : 'text-gray-200'}`}><span>•−</span><span>Morse</span></a>
         </div>
       </div>
       </div>

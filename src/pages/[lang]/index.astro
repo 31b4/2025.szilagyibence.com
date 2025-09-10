@@ -22,7 +22,7 @@ const t = await loadDictionary(locale);
 const pageTitle = t.meta?.title ?? "Bence Szilagyi | Developer & Creator | Hungary";
 ---
 
-<MainLayout title={pageTitle} lang={locale}>
+<MainLayout title={pageTitle} lang={(locale === 'ascii' || locale === 'morse' || locale === 'binary' || locale === 'hex' || locale === 'hier' || locale === 'braille' || locale === 'asl') ? 'en' : locale}>
   <fragment slot="head">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={t.meta?.description} />
@@ -45,6 +45,21 @@ const pageTitle = t.meta?.title ?? "Bence Szilagyi | Developer & Creator | Hunga
   <link rel="alternate" hreflang="en" href="https://szilagyibence.com/" />
   <link rel="alternate" hreflang="hu" href="https://szilagyibence.com/hu/" />
   <link rel="alternate" hreflang="es" href="https://szilagyibence.com/es/" />
+  <link rel="alternate" hreflang="zh" href="https://szilagyibence.com/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://szilagyibence.com/ja/" />
+  <link rel="alternate" hreflang="hi" href="https://szilagyibence.com/hi/" />
+  <link rel="alternate" hreflang="fr" href="https://szilagyibence.com/fr/" />
+  <link rel="alternate" hreflang="ar" href="https://szilagyibence.com/ar/" />
+  <link rel="alternate" hreflang="ru" href="https://szilagyibence.com/ru/" />
+  <link rel="alternate" hreflang="pt" href="https://szilagyibence.com/pt/" />
+  <link rel="alternate" hreflang="id" href="https://szilagyibence.com/id/" />
+  <link rel="alternate" hreflang="x-ascii" href="https://szilagyibence.com/ascii/" />
+  <link rel="alternate" hreflang="x-morse" href="https://szilagyibence.com/morse/" />
+  <link rel="alternate" hreflang="x-binary" href="https://szilagyibence.com/binary/" />
+  <link rel="alternate" hreflang="x-hex" href="https://szilagyibence.com/hex/" />
+  <link rel="alternate" hreflang="x-hier" href="https://szilagyibence.com/hier/" />
+  <link rel="alternate" hreflang="x-braille" href="https://szilagyibence.com/braille/" />
+  <link rel="alternate" hreflang="x-asl" href="https://szilagyibence.com/asl/" />
   <link rel="alternate" hreflang="x-default" href="https://szilagyibence.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
