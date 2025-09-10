@@ -1,0 +1,18 @@
+---
+import "../styles/custom.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    {title ? <title>{title}</title> : null}
+    <slot name="head" />
+  </head>
+  <body class="bg-black text-white antialiased font-inter">
+    <slot />
+  </body>
+</html>
