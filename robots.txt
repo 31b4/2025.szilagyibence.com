@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /card
 Allow: /
 
 Sitemap: https://szilagyibence.com/sitemap-index.xml
