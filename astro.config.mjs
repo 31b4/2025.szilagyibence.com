@@ -9,7 +9,12 @@ export default defineConfig({
   site: 'https://szilagyibence.com',
   // Important for custom-domain (GitHub Pages with CNAME): keep at root
   base: '/',
-  integrations: [tailwind(), sitemap()],
+  integrations: [
+    tailwind(),
+    sitemap({
+      filter: (page) => !page.includes('/card'),
+    }),
+  ],
   i18n: {
   locales: ['en', 'hu', 'es', 'zh', 'ja', 'hi', 'fr', 'ar', 'ru', 'pt', 'id', 'ascii', 'morse', 'binary', 'hex', 'hier', 'braille', 'asl'],
     defaultLocale: 'en',
