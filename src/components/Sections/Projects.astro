@@ -8,6 +8,29 @@ const { t } = Astro.props;
     </h2>
 
     <div class="space-y-16">
+      <!-- Inviso Project (moved to top) -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-first">
+          <img src="/imgs/projects/chat.png" alt="Inviso Secure Chat App" 
+               class="w-full max-w-xs mx-auto lg:ml-auto lg:mr-0 rounded-lg shadow-2xl" loading="lazy" />
+        </div>
+        <div class="space-y-6">
+          <h3 class="text-3xl font-bold">
+            <span class="text-white hover:text-blue-400 transition-colors cursor-default">Inviso - 2025</span>
+          </h3>
+          <p class="text-xl text-gray-300">{t?.projects?.inviso?.subtitle ?? 'The most secure chat app in the world.'}</p>
+          <p class="text-gray-400">{t?.projects?.inviso?.detail ?? 'EA peer-to-peer, end-to-end encrypted messenger with no history and no user data saved.'}</p>
+          {t?.projects?.inviso?.repo && (
+            <a href={t.projects.inviso.repo} target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
+              <i class="fa-brands fa-github text-base mr-2"></i>
+              {t?.common?.repository ?? 'Repository'}
+            </a>
+          )}
+        </div>
+      </div>
+
+      <div class="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
+
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 text-left lg:text-right">
           <h3 class="text-3xl font-bold">

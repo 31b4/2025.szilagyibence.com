@@ -53,6 +53,11 @@
     "infra": "Infraestructura y DevOps"
   },
   "projects": {
+    "inviso": {
+      "subtitle": "La app de chat más segura del mundo.",
+      "detail": "Mensajería P2P con cifrado de extremo a extremo, sin historial ni datos de usuario guardados.",
+      "repo": "https://github.com/apptrackit/chat-ios"
+    },
     "trackit": {
       "subtitle": "Rastreador de salud y fitness multiplataforma.",
       "detail": "Integración con Apple HealthKit usando Swift + backend en PostgreSQL."

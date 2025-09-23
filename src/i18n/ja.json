@@ -29,6 +29,7 @@
   },
   "skills": { "mobile": "モバイル開発", "web": "Web 開発", "infra": "インフラ・DevOps" },
   "projects": {
+  "inviso": { "subtitle": "世界で最も安全なチャットアプリ。", "detail": "履歴と保存ユーザーデータを一切持たない P2P 型エンドツーエンド暗号化メッセンジャー。", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "クロスプラットフォームのヘルス＆フィットネストラッカー。", "detail": "Swift + PostgreSQL バックエンドに Apple HealthKit を統合。" },
     "univerx": { "subtitle": "大学生活に必要な機能を一つに。", "detail": "授業や試験などをまとめて管理。" },
     "smalljs": {

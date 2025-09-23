@@ -29,6 +29,7 @@
   },
   "skills": { "mobile": "Desenvolvimento mobile", "web": "Desenvolvimento web", "infra": "Infraestrutura e DevOps" },
   "projects": {
+  "inviso": { "subtitle": "O app de chat mais seguro do mundo.", "detail": "Mensageria P2P criptografada ponta a ponta, sem histórico nem dados de usuário retidos.", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "Rastreador de saúde e fitness multiplataforma.", "detail": "Integração Apple HealthKit com Swift + backend PostgreSQL." },
     "univerx": { "subtitle": "O único app universitário que você precisa.", "detail": "Gerencie suas aulas, provas e muito mais." },
     "smalljs": {

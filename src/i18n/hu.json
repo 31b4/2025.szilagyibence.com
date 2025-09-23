@@ -53,6 +53,11 @@
     "infra": "Infrastruktúra és DevOps"
   },
   "projects": {
+    "inviso": {
+      "subtitle": "A világ legbiztonságosabb csevegőalkalmazása.",
+      "detail": "Peer-to-peer, végpontok közti titkosítású üzenetküldés előzmények és mentett felhasználói adatok nélkül.",
+      "repo": "https://github.com/apptrackit/chat-ios"
+    },
     "trackit": {
       "subtitle": "Keresztplatformos egészség és fitnesz nyomkövető.",
       "detail": "Apple HealthKit integráció Swift-tel + PostgreSQL háttérrendszer."

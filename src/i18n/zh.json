@@ -47,6 +47,11 @@
     "infra": "基础设施与 DevOps"
   },
   "projects": {
+    "inviso": {
+      "subtitle": "全球最安全的聊天应用。",
+      "detail": "点对点端到端加密通信，无聊天记录与用户数据保存。",
+      "repo": "https://github.com/apptrackit/chat-ios"
+    },
     "trackit": {
       "subtitle": "跨平台健康与健身追踪。",
       "detail": "基于 Swift + PostgreSQL 后端，集成 Apple HealthKit。"
