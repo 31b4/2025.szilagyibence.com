@@ -29,6 +29,7 @@
   },
   "skills": { "mobile": "تطوير الأجهزة المحمولة", "web": "تطوير الويب", "infra": "البنية التحتية و DevOps" },
   "projects": {
+  "inviso": { "subtitle": "أكثر تطبيق دردشة أمانًا في العالم.", "detail": "مراسلة نظير إلى نظير بتشفير شامل دون سجلات أو بيانات مستخدم محفوظة.", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "متتبّع صحّة ولياقة متعدد المنصّات.", "detail": "تكامل Apple HealthKit باستخدام Swift + خلفية PostgreSQL." },
     "univerx": { "subtitle": "التطبيق الجامعي الوحيد الذي تحتاجه.", "detail": "أدر صفوفك وامتحاناتك وغير ذلك الكثير." },
     "smalljs": {

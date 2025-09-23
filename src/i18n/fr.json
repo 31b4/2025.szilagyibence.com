@@ -29,6 +29,7 @@
   },
   "skills": { "mobile": "Développement mobile", "web": "Développement web", "infra": "Infrastructure & DevOps" },
   "projects": {
+  "inviso": { "subtitle": "L’application de messagerie la plus sûre au monde.", "detail": "Messagerie pair-à-pair chiffrée de bout en bout, sans historique ni données utilisateur conservées.", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "Suivi santé et fitness multiplateforme.", "detail": "Intégration Apple HealthKit avec Swift + backend PostgreSQL." },
     "univerx": { "subtitle": "La seule application universitaire dont vous avez besoin.", "detail": "Gérez vos cours, examens et bien plus." },
     "smalljs": {

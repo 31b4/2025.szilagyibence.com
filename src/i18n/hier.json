@@ -47,6 +47,11 @@
     "infra": "𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 & 𓂧𓇋𓎼𓅱𓊪𓋴"
   },
   "projects": {
+    "inviso": {
+      "subtitle": "𓄿𓅱𓃭 𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 𓂧 𓊪𓇯𓅱𓎢 𓈖 𓇋𓈖 𓂧𓇋𓄿𓃭𓅱𓊪𓇯",
+      "detail": "𓊪𓇯𓅱𓎼𓇯𓄿𓅓𓅓 P2P 𓇋𓈖 E2E 𓇋𓈖𓇯𓈖𓏲 𓅱𓈖 𓄿𓅱𓃭 𓂧𓇋𓄿𓃭𓅱𓊪𓇯 𓄿𓅱𓃭 𓇋𓈖 𓅱𓇯𓃭𓂧 𓄿𓇋𓅱 𓍿𓇋𓅱𓏏",
+      "repo": "https://github.com/apptrackit/chat-ios"
+    },
     "trackit": {
       "subtitle": "𓄿𓅱𓃭 𓂧𓇋𓄿𓃭𓅱𓊪𓇯 𓅱𓈖 𓊪𓇯𓅱𓎢𓇋𓈖𓏏𓏤 𓅱𓇯𓃭𓂧.",
       "detail": "Apple HealthKit 𓇋𓈖𓇯𓈖𓏲 𓋴𓇋𓏏𓆑𓏏 + PostgreSQL 𓃀𓇋𓍿𓏏𓅱𓈖𓂧."

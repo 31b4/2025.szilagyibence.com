@@ -55,6 +55,11 @@
     "infra": "Infrastructure & DevOps"
   },
   "projects": {
+        "inviso": {
+          "subtitle": "The most secure chat app in the world.",
+          "detail": "A peer-to-peer, end-to-end encrypted messenger with no history and no user data saved.",
+          "repo": ""
+        },
     "trackit": {
       "subtitle": "Cross-platform health & fitness tracker.",
       "detail": "Apple HealthKit integration with Swift + PostgreSQL backend."
