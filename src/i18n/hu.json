@@ -9,7 +9,9 @@
     "brandInitialsLeft": "Sz",
     "brandInitialsRight": "B",
     "repository": "Repo",
-    "resume": "Önéletrajz"
+    "resume": "Önéletrajz",
+    "resumeEnglish": "Angol önéletrajz",
+    "resumeHungarian": "Magyar önéletrajz"
   },
   "hero": {
     "tagline": "Vállalkozó, fejlesztő és bokszoló, határtalan ambícióval."

@@ -29,13 +29,67 @@ const { t } = Astro.props;
                class="px-8 py-3 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-300">
               {t?.about?.contactMe ?? 'Contact Me'}
             </a>
-            <a href="/CV.pdf" target="_blank"
-               class="px-8 py-3 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-300">
-              {t?.about?.downloadCV ?? 'Download CV'}
-            </a>
+                        <div class="relative group">
+              <button id="resume-dropdown-btn" 
+                     class="px-8 py-3 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-300 flex items-center gap-2">
+                {t?.about?.downloadCV ?? 'Download CV'}
+                <i class="fa-solid fa-chevron-down text-sm transition-transform group-hover:rotate-180"></i>
+              </button>
+              <div id="resume-dropdown" class="absolute top-full mt-2 left-0 w-full min-w-max bg-gray-800 border border-gray-600 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <a href="/Resume - English.pdf" target="_blank" 
+                   class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors rounded-t-lg whitespace-nowrap">
+                  <i class="fa-solid fa-file-pdf text-red-400 mr-2"></i>{t?.common?.resumeEnglish ?? 'English Resume'}
+                </a>
+                <a href="/Resume - Hungarian.pdf" target="_blank" 
+                   class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors rounded-b-lg whitespace-nowrap">
+                  <i class="fa-solid fa-file-pdf text-red-400 mr-2"></i>{t?.common?.resumeHungarian ?? 'Hungarian Resume'}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdownBtn = document.getElementById('resume-dropdown-btn');
+    const dropdown = document.getElementById('resume-dropdown');
+    let isOpen = false;
+
+    if (dropdownBtn && dropdown) {
+      dropdownBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        isOpen = !isOpen;
+        
+        if (isOpen) {
+          dropdown.classList.remove('opacity-0', 'invisible');
+          dropdown.classList.add('opacity-100', 'visible');
+        } else {
+          dropdown.classList.add('opacity-0', 'invisible');
+          dropdown.classList.remove('opacity-100', 'visible');
+        }
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!dropdownBtn.contains(e.target as Node) && !dropdown.contains(e.target as Node)) {
+          isOpen = false;
+          dropdown.classList.add('opacity-0', 'invisible');
+          dropdown.classList.remove('opacity-100', 'visible');
+        }
+      });
+
+      // Close dropdown on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && isOpen) {
+          isOpen = false;
+          dropdown.classList.add('opacity-0', 'invisible');
+          dropdown.classList.remove('opacity-100', 'visible');
+        }
+      });
+    }
+  });
+</script>

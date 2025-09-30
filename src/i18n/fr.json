@@ -5,7 +5,7 @@
     "ogTitle": "Bence Szilagyi | Développeur & Créateur",
     "ogDescription": "Développeur passionné de Hongrie présentant des projets et réalisations innovants"
   },
-  "common": { "brandInitialsLeft": "Sz", "brandInitialsRight": "B", "repository": "Dépôt", "resume": "CV" },
+  "common": { "brandInitialsLeft": "Sz", "brandInitialsRight": "B", "repository": "Dépôt", "resume": "CV", "resumeEnglish": "CV Anglais", "resumeHungarian": "CV Hongrois" },
   "hero": { "tagline": "Entrepreneur, développeur et boxeur à l’ambition sans limites." },
   "about": {
     "titlePrefix": "Je suis",

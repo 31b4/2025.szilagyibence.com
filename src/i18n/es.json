@@ -9,7 +9,9 @@
     "brandInitialsLeft": "Sz",
     "brandInitialsRight": "B",
     "repository": "Repositorio",
-    "resume": "Currículum"
+    "resume": "Currículum",
+    "resumeEnglish": "Currículum en Inglés",
+    "resumeHungarian": "Currículum en Húngaro"
   },
   "hero": {
     "tagline": "Emprendedor, desarrollador y boxeador con ambición ilimitada."
