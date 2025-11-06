@@ -26,12 +26,50 @@
   },
   "sections": {
     "projects": "Projects",
+    "workExperience": "Work Experience",
     "achievements": "Achievements",
     "skills": "What I Can Build",
     "contact": "Contact Me"
   },
   "contact": {
     "cta": "Let's connect and build something amazing together!"
+  },
+  "workExperience": {
+    "jobs": [
+      {
+        "company": "ALTEO",
+        "position": "E-mobility Intern",
+        "period": "10/2025 - Present",
+        "location": "Hybrid",
+        "description": "Internship at ALTEO focusing on e-mobility solutions and sustainable energy initiatives.",
+        "technologies": [],
+        "logo": "/imgs/companies/alteo.png"
+      },
+      {
+        "company": "Camp Cody",
+        "position": "Kitchen Assistant",
+        "period": "06/2025 - 09/2025",
+        "location": "USA",
+        "description": "Kitchen Assistant in the U.S., helping serve a fast-paced kitchen for 600 people while learning teamwork and team management.",
+        "technologies": []
+      },
+      {
+        "company": "Ortho Graph",
+        "position": "Fullstack Developer",
+        "period": "2024 - 2025",
+        "location": "",
+        "description": "Maintained a Laravel-based backend and containerized it with Docker.",
+        "technologies": ["PHP", "Docker", "Docker-compose", "Git"]
+      },
+      {
+        "company": "Mária Rádió",
+        "position": "Production Technician",
+        "period": "2021 - 2022",
+        "location": "",
+        "description": "Organizing daily tracks to ensure smooth and consistent broadcasts. Recording and editing podcasts to deliver polished and engaging content.",
+        "technologies": []
+      }
+    ]
   },
   "achievements": {
     "aocThanks": "Amazing puzzles, thanks to",

@@ -1,0 +1,103 @@
+---
+const { t } = Astro.props;
+const workExperiences = t?.workExperience?.jobs ?? [];
+
+interface Job {
+  company: string;
+  position: string;
+  period: string;
+  location?: string;
+  description: string;
+  technologies?: string[];
+  logo?: string;
+}
+---
+<section id="work-experience" class="relative z-40 py-20 bg-black">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+        {t?.sections?.workExperience ?? 'Work Experience'}
+      </span>
+    </h2>
+
+    <div class="max-w-5xl mx-auto">
+      <!-- Timeline container -->
+      <div class="relative">
+        <!-- Vertical timeline line -->
+        <div class="absolute left-[15px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-500 via-cyan-400 to-blue-500 md:left-[168px]"></div>
+        
+        {workExperiences.map((job: Job) => (
+          <div class="relative pb-12 last:pb-0">
+            
+            <!-- Timeline dot - perfectly centered on line -->
+            <div class="absolute left-[8px] top-0 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-black z-10 md:left-[161px]"></div>
+            
+            <!-- Desktop: Date on left side aligned with dot -->
+            <div class="hidden md:block absolute left-0 top-[-4px] w-[145px] text-right pr-6">
+              <span class="inline-block text-sm font-bold text-blue-400 whitespace-nowrap">
+                {job.period}
+              </span>
+            </div>
+            
+            <!-- Content -->
+            <div class="ml-10 md:ml-56">
+              
+              <!-- Mobile: Date above card -->
+              <div class="md:hidden mb-3">
+                <span class="inline-block text-sm font-bold text-blue-400">
+                  {job.period}
+                </span>
+              </div>
+              
+              <!-- Job Card -->
+              <div class="group relative bg-gradient-to-br from-gray-900/60 to-gray-900/40 rounded-2xl p-6 border border-gray-800 hover:border-blue-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 backdrop-blur-sm">
+                
+                <!-- Company header -->
+                <div class="flex items-start gap-4 mb-4">
+                  {job.logo && (
+                    <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-3 border border-gray-700 group-hover:border-blue-500/50 transition-colors flex items-center justify-center">
+                      <img src={job.logo} alt={`${job.company} logo`} class="w-full h-full object-contain" />
+                    </div>
+                  )}
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">
+                      {job.company}
+                    </h3>
+                    <p class="text-lg text-gray-300 mb-2">{job.position}</p>
+                    {job.location && (
+                      <div class="flex items-center gap-1.5 text-sm text-gray-500">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span>{job.location}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                
+                <!-- Description -->
+                <p class="text-gray-400 leading-relaxed text-[15px]">
+                  {job.description}
+                </p>
+                
+                <!-- Technologies -->
+                {job.technologies && job.technologies.length > 0 && (
+                  <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-800">
+                    {job.technologies.map((tech: string) => (
+                      <span class="px-3 py-1.5 text-xs font-medium bg-gray-800/80 text-gray-300 rounded-lg border border-gray-700/50 hover:border-blue-500/50 hover:bg-gray-800 transition-all">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+            </div>
+          </div>
+        ))}
+        
+      </div>
+    </div>
+  </div>
+</section>

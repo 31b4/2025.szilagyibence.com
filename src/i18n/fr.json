@@ -15,8 +15,16 @@
     "contactMe": "Me contacter",
     "downloadCV": "Télécharger le CV"
   },
-  "sections": { "projects": "Projets", "achievements": "Réalisations", "skills": "Ce que je peux construire", "contact": "Contact" },
-  "contact": { "cta": "Connectons-nous et bâtissons quelque chose d’extraordinaire !" },
+  "sections": { "projects": "Projets", "workExperience": "Expérience Professionnelle", "achievements": "Réalisations", "skills": "Ce que je peux construire", "contact": "Contact" },
+  "contact": { "cta": "Connectons-nous et bâtissons quelque chose d'extraordinaire !" },
+  "workExperience": {
+    "jobs": [
+      { "company": "ALTEO", "position": "Stagiaire E-mobilité", "period": "10/2025 - Présent", "location": "Hybride", "description": "Stage chez ALTEO axé sur les solutions de mobilité électrique et les initiatives d'énergie durable.", "technologies": [] },
+      { "company": "Camp Cody", "position": "Assistant de Cuisine", "period": "06/2025 - 09/2025", "location": "USA", "description": "Assistant de cuisine aux États-Unis, aidant à servir une cuisine rapide pour 600 personnes tout en apprenant le travail d'équipe et la gestion d'équipe.", "technologies": [] },
+      { "company": "Ortho Graph", "position": "Développeur Fullstack", "period": "2024 - 2025", "location": "", "description": "Maintenance d'un backend basé sur Laravel et conteneurisation avec Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
+      { "company": "Mária Rádió", "position": "Technicien de Production", "period": "2021 - 2022", "location": "", "description": "Organisation des émissions quotidiennes pour assurer des diffusions fluides et cohérentes. Enregistrement et édition de podcasts pour fournir un contenu soigné et engageant.", "technologies": [] }
+    ]
+  },
   "achievements": {
     "aocThanks": "Énigmes incroyables, merci à",
     "round1": "Manche 1",

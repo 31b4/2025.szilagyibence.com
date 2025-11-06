@@ -15,8 +15,16 @@
     "contactMe": "Kontak",
     "downloadCV": "Unduh CV"
   },
-  "sections": { "projects": "Proyek", "achievements": "Pencapaian", "skills": "Apa yang bisa saya bangun", "contact": "Kontak" },
+  "sections": { "projects": "Proyek", "workExperience": "Pengalaman Kerja", "achievements": "Pencapaian", "skills": "Apa yang bisa saya bangun", "contact": "Kontak" },
   "contact": { "cta": "Ayo terhubung dan bangun sesuatu yang luar biasa bersama!" },
+  "workExperience": {
+    "jobs": [
+      { "company": "ALTEO", "position": "Magang E-mobilitas", "period": "10/2025 - Sekarang", "location": "Hibrida", "description": "Magang di ALTEO dengan fokus pada solusi mobilitas listrik dan inisiatif energi berkelanjutan.", "technologies": [] },
+      { "company": "Camp Cody", "position": "Asisten Dapur", "period": "06/2025 - 09/2025", "location": "AS", "description": "Asisten dapur di AS, membantu melayani dapur yang sibuk untuk 600 orang sambil belajar kerja tim dan manajemen tim.", "technologies": [] },
+      { "company": "Ortho Graph", "position": "Pengembang Fullstack", "period": "2024 - 2025", "location": "", "description": "Memelihara backend berbasis Laravel dan mengontainerisasinya dengan Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
+      { "company": "Mária Rádió", "position": "Teknisi Produksi", "period": "2021 - 2022", "location": "", "description": "Mengatur trek harian untuk memastikan siaran yang lancar dan konsisten. Merekam dan mengedit podcast untuk memberikan konten yang halus dan menarik.", "technologies": [] }
+    ]
+  },
   "achievements": {
     "aocThanks": "Teka-teki yang luar biasa, terima kasih kepada",
     "round1": "Ronde 1",

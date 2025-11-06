@@ -15,8 +15,16 @@
     "contactMe": "संपर्क करें",
     "downloadCV": "रिज़्यूमे डाउनलोड करें"
   },
-  "sections": { "projects": "प्रोजेक्ट्स", "achievements": "उपलब्धियाँ", "skills": "मैं क्या बना सकता हूँ", "contact": "संपर्क" },
+  "sections": { "projects": "प्रोजेक्ट्स", "workExperience": "कार्य अनुभव", "achievements": "उपलब्धियाँ", "skills": "मैं क्या बना सकता हूँ", "contact": "संपर्क" },
   "contact": { "cta": "आइए जुड़ें और मिलकर कुछ शानदार बनाएं!" },
+  "workExperience": {
+    "jobs": [
+      { "company": "ALTEO", "position": "ई-मोबिलिटी इंटर्न", "period": "10/2025 - वर्तमान", "location": "हाइब्रिड", "description": "ALTEO में इंटर्नशिप जो ई-मोबिलिटी समाधानों और सतत ऊर्जा पहलों पर केंद्रित है।", "technologies": [] },
+      { "company": "Camp Cody", "position": "किचन असिस्टेंट", "period": "06/2025 - 09/2025", "location": "यू.एस.ए.", "description": "संयुक्त राज्य अमेरिका में किचन असिस्टेंट, 600 लोगों के लिए तेज़-रफ़्तार रसोई में सेवा करने में मदद करते हुए टीमवर्क और टीम मैनेजमेंट सीखना।", "technologies": [] },
+      { "company": "Ortho Graph", "position": "फुलस्टैक डेवलपर", "period": "2024 - 2025", "location": "", "description": "Laravel-आधारित बैकेंड का रखरखाव और Docker के साथ कंटेनराइजेशन।", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
+      { "company": "Mária Rádió", "position": "प्रोडक्शन तकनीशियन", "period": "2021 - 2022", "location": "", "description": "सुचारू और सुसंगत प्रसारण सुनिश्चित करने के लिए दैनिक ट्रैक का आयोजन। पॉलिश और आकर्षक सामग्री देने के लिए पॉडकास्ट की रिकॉर्डिंग और संपादन।", "technologies": [] }
+    ]
+  },
   "achievements": {
     "aocThanks": "शानदार पहेलियाँ, धन्यवाद",
     "round1": "राउंड 1",

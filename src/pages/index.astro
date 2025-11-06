@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar.astro";
 import Hero from "../components/Hero.astro";
 import Projects from "../components/Sections/Projects.astro";
 import About from "../components/Sections/About.astro";
+import WorkExperience from "../components/Sections/WorkExperience.astro";
 import Achievements from "../components/Sections/Achievements.astro";
 import Skills from "../components/Sections/Skills.astro";
 import Contact from "../components/Sections/Contact.astro";
@@ -85,6 +86,7 @@ const pageTitle = t.meta?.title ?? "Bence Szilagyi | Developer & Creator | Hunga
   <div class="relative z-40">
     <About t={t} />
     <Projects t={t} />
+    <WorkExperience t={t} />
   </div>
 
   <Achievements t={t} />
