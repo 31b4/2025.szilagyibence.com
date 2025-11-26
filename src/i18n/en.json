@@ -95,6 +95,11 @@
     "infra": "Infrastructure & DevOps"
   },
   "projects": {
+        "finance": {
+          "subtitle": "Self-hosted personal finance manager.",
+          "detail": "Secure, self-hosted personal finance app built with React and Cloudflare Workers. Track accounts, transactions and analytics.",
+          "repo": ""
+        },
         "inviso": {
           "subtitle": "The most secure chat app in the world.",
           "detail": "A peer-to-peer, end-to-end encrypted messenger with no history and no user data saved.",

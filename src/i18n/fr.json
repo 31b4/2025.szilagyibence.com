@@ -37,6 +37,11 @@
   },
   "skills": { "mobile": "Développement mobile", "web": "Développement web", "infra": "Infrastructure & DevOps" },
   "projects": {
+    "finance": {
+      "subtitle": "Gestionnaire financier personnel auto-hébergé.",
+      "detail": "Application de finances personnelles sécurisée et auto-hébergée construite avec React et Cloudflare Workers. Suivi des comptes, des transactions et des analyses.",
+      "repo": ""
+    },
   "inviso": { "subtitle": "L’application de messagerie la plus sûre au monde.", "detail": "Messagerie pair-à-pair chiffrée de bout en bout, sans historique ni données utilisateur conservées.", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "Suivi santé et fitness multiplateforme.", "detail": "Intégration Apple HealthKit avec Swift + backend PostgreSQL." },
     "univerx": { "subtitle": "La seule application universitaire dont vous avez besoin.", "detail": "Gérez vos cours, examens et bien plus." },

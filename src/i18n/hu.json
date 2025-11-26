@@ -93,6 +93,11 @@
     "infra": "Infrastruktúra és DevOps"
   },
   "projects": {
+    "finance": {
+      "subtitle": "Önhostolt személyes pénzügyi alkalmazás.",
+      "detail": "Biztonságos, önmagad által hosztolt pénzügykezelő alkalmazás React és Cloudflare Workers használatával. Számlák, tranzakciók és elemzések nyomon követése.",
+      "repo": ""
+    },
     "inviso": {
       "subtitle": "A világ legbiztonságosabb csevegőalkalmazása.",
       "detail": "Peer-to-peer, végpontok közti titkosítású üzenetküldés előzmények és mentett felhasználói adatok nélkül.",

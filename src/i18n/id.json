@@ -37,6 +37,7 @@
   },
   "skills": { "mobile": "Pengembangan Mobile", "web": "Pengembangan Web", "infra": "Infrastruktur & DevOps" },
   "projects": {
+  "finance": { "subtitle": "Manajer keuangan pribadi yang di-host sendiri.", "detail": "Aplikasi keuangan pribadi yang aman dan di-host sendiri dibangun dengan React dan Cloudflare Workers. Lacak akun, transaksi, dan analitik.", "repo": "" },
   "inviso": { "subtitle": "Aplikasi chat paling aman di dunia.", "detail": "Pesan P2P terenkripsi ujung-ke-ujung tanpa riwayat atau data pengguna yang disimpan.", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "Pelacak kesehatan & kebugaran lintas platform.", "detail": "Integrasi Apple HealthKit dengan Swift + backend PostgreSQL." },
     "univerx": { "subtitle": "Satu-satunya aplikasi kampus yang Anda butuhkan.", "detail": "Kelola kelas, ujian, dan banyak lagi." },
