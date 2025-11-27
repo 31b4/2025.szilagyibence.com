@@ -35,9 +35,11 @@
   "workExperience": {
     "jobs": [
       { "company": "ALTEO", "position": "电动出行实习生", "period": "10/2025 - 至今", "location": "混合", "description": "在ALTEO实习，专注于电动出行解决方案和可持续能源计划。", "technologies": [] },
-      { "company": "Camp Cody", "position": "厨房助理", "period": "06/2025 - 09/2025", "location": "美国", "description": "在美国担任厨房助理，帮助为600人提供快节奏的厨房服务，同时学习团队合作和团队管理。", "technologies": [] },
+  { "company": "ALTEO", "position": "电动出行实习生", "period": "10/2025 - 至今", "location": "混合", "description": "在ALTEO实习，专注于电动出行解决方案和可持续能源计划。", "technologies": [], "logo": "/imgs/companies/alteo.png" },
+  { "company": "Camp Cody", "position": "厨房助理", "period": "06/2025 - 09/2025", "location": "美国", "description": "在美国担任厨房助理，帮助为600人提供快节奏的厨房服务，同时学习团队合作和团队管理。", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
       { "company": "Ortho Graph", "position": "全栈开发者", "period": "2024 - 2025", "location": "", "description": "维护基于Laravel的后端并使用Docker进行容器化。", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
-      { "company": "Mária Rádió", "position": "制作技术员", "period": "2021 - 2022", "location": "", "description": "组织日常节目以确保流畅一致的广播。录制和编辑播客以提供精良且引人入胜的内容。", "technologies": [] }
+  { "company": "Ortho Graph", "position": "全栈开发者", "period": "2024 - 2025", "location": "", "description": "维护基于Laravel的后端并使用Docker进行容器化。", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "制作技术员", "period": "2021 - 2022", "location": "", "description": "组织日常节目以确保流畅一致的广播。录制和编辑播客以提供精良且引人入胜的内容。", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
     ]
   },
   "achievements": {

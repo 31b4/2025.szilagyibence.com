@@ -37,6 +37,15 @@
   "workExperience": {
     "jobs": [
       {
+        "company": "Sonrisa",
+        "position": "Software Engineer",
+        "period": "12/2025 - Present",
+        "location": "",
+        "description": "Developing and writing AI agents.",
+        "technologies": [],
+        "logo": "/imgs/companies/sonrisa.jpeg"
+      },
+      {
         "company": "ALTEO",
         "position": "E-mobility Intern",
         "period": "10/2025 - Present",
@@ -51,7 +60,8 @@
         "period": "06/2025 - 09/2025",
         "location": "USA",
         "description": "Kitchen Assistant in the U.S., helping serve a fast-paced kitchen for 600 people while learning teamwork and team management.",
-        "technologies": []
+        "technologies": [],
+        "logo": "/imgs/companies/campcody.jpeg"
       },
       {
         "company": "Ortho Graph",
@@ -59,7 +69,8 @@
         "period": "2024 - 2025",
         "location": "",
         "description": "Maintained a Laravel-based backend and containerized it with Docker.",
-        "technologies": ["PHP", "Docker", "Docker-compose", "Git"]
+        "technologies": ["PHP", "Docker", "Docker-compose", "Git"],
+        "logo": "/imgs/companies/orthograph.png"
       },
       {
         "company": "Mária Rádió",
@@ -67,7 +78,8 @@
         "period": "2021 - 2022",
         "location": "",
         "description": "Organizing daily tracks to ensure smooth and consistent broadcasts. Recording and editing podcasts to deliver polished and engaging content.",
-        "technologies": []
+        "technologies": [],
+        "logo": "/imgs/companies/mariaradio.webp"
       }
     ]
   },

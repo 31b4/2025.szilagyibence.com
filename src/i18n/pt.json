@@ -19,10 +19,11 @@
   "contact": { "cta": "Vamos nos conectar e construir algo incrível juntos!" },
   "workExperience": {
     "jobs": [
-      { "company": "ALTEO", "position": "Estagiário de E-mobilidade", "period": "10/2025 - Presente", "location": "Híbrido", "description": "Estágio na ALTEO com foco em soluções de mobilidade elétrica e iniciativas de energia sustentável.", "technologies": [] },
+  { "company": "ALTEO", "position": "Estagiário de E-mobilidade", "period": "10/2025 - Presente", "location": "Híbrido", "description": "Estágio na ALTEO com foco em soluções de mobilidade elétrica e iniciativas de energia sustentável.", "technologies": [], "logo": "/imgs/companies/alteo.png" },
       { "company": "Camp Cody", "position": "Assistente de Cozinha", "period": "06/2025 - 09/2025", "location": "EUA", "description": "Assistente de cozinha nos EUA, ajudando a servir uma cozinha de ritmo rápido para 600 pessoas enquanto aprendia trabalho em equipe e gestão de equipes.", "technologies": [] },
-      { "company": "Ortho Graph", "position": "Desenvolvedor Fullstack", "period": "2024 - 2025", "location": "", "description": "Manutenção de um backend baseado em Laravel e containerização com Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
-      { "company": "Mária Rádió", "position": "Técnico de Produção", "period": "2021 - 2022", "location": "", "description": "Organização de faixas diárias para garantir transmissões suaves e consistentes. Gravação e edição de podcasts para entregar conteúdo polido e envolvente.", "technologies": [] }
+  { "company": "Camp Cody", "position": "Assistente de Cozinha", "period": "06/2025 - 09/2025", "location": "EUA", "description": "Assistente de cozinha nos EUA, ajudando a servir uma cozinha de ritmo rápido para 600 pessoas enquanto aprendia trabalho em equipe e gestão de equipes.", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
+  { "company": "Ortho Graph", "position": "Desenvolvedor Fullstack", "period": "2024 - 2025", "location": "", "description": "Manutenção de um backend baseado em Laravel e containerização com Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "Técnico de Produção", "period": "2021 - 2022", "location": "", "description": "Organização de faixas diárias para garantir transmissões suaves e consistentes. Gravação e edição de podcasts para entregar conteúdo polido e envolvente.", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
     ]
   },
   "achievements": {

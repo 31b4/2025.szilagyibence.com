@@ -42,7 +42,8 @@
         "period": "10/2025 - Presente",
         "location": "Híbrido",
         "description": "Pasantía en ALTEO enfocada en soluciones de movilidad eléctrica e iniciativas de energía sostenible.",
-        "technologies": []
+        "technologies": [],
+        "logo": "/imgs/companies/alteo.png"
       },
       {
         "company": "Camp Cody",
@@ -50,7 +51,8 @@
         "period": "06/2025 - 09/2025",
         "location": "EE.UU.",
         "description": "Asistente de cocina en EE.UU., ayudando a servir una cocina de ritmo rápido para 600 personas mientras aprendía trabajo en equipo y gestión de equipos.",
-        "technologies": []
+        "technologies": [],
+        "logo": "/imgs/companies/campcody.jpeg"
       },
       {
         "company": "Ortho Graph",
@@ -58,7 +60,8 @@
         "period": "2024 - 2025",
         "location": "",
         "description": "Mantenimiento de un backend basado en Laravel y su containerización con Docker.",
-        "technologies": ["PHP", "Docker", "Docker-compose", "Git"]
+        "technologies": ["PHP", "Docker", "Docker-compose", "Git"],
+        "logo": "/imgs/companies/orthograph.png"
       },
       {
         "company": "Mária Rádió",
@@ -66,7 +69,8 @@
         "period": "2021 - 2022",
         "location": "",
         "description": "Organización de pistas diarias para garantizar transmisiones fluidas y consistentes. Grabación y edición de podcasts para entregar contenido pulido y atractivo.",
-        "technologies": []
+        "technologies": [],
+        "logo": "/imgs/companies/mariaradio.webp"
       }
     ]
   },

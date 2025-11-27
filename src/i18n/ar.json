@@ -20,9 +20,11 @@
   "workExperience": {
     "jobs": [
       { "company": "ALTEO", "position": "متدرب التنقل الإلكتروني", "period": "10/2025 - الحاضر", "location": "هجين", "description": "تدريب في ALTEO يركز على حلول التنقل الكهربائي ومبادرات الطاقة المستدامة.", "technologies": [] },
-      { "company": "Camp Cody", "position": "مساعد مطبخ", "period": "06/2025 - 09/2025", "location": "الولايات المتحدة", "description": "مساعد مطبخ في الولايات المتحدة، يساعد في تقديم الطعام لمطبخ سريع الوتيرة لـ600 شخص مع تعلم العمل الجماعي وإدارة الفريق.", "technologies": [] },
+  { "company": "ALTEO", "position": "متدرب التنقل الإلكتروني", "period": "10/2025 - الحاضر", "location": "هجين", "description": "تدريب في ALTEO يركز على حلول التنقل الكهربائي ومبادرات الطاقة المستدامة.", "technologies": [], "logo": "/imgs/companies/alteo.png" },
+  { "company": "Camp Cody", "position": "مساعد مطبخ", "period": "06/2025 - 09/2025", "location": "الولايات المتحدة", "description": "مساعد مطبخ في الولايات المتحدة، يساعد في تقديم الطعام لمطبخ سريع الوتيرة لـ600 شخص مع تعلم العمل الجماعي وإدارة الفريق.", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
       { "company": "Ortho Graph", "position": "مطور Fullstack", "period": "2024 - 2025", "location": "", "description": "صيانة backend قائم على Laravel وحوسبته باستخدام Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
-      { "company": "Mária Rádió", "position": "فني إنتاج", "period": "2021 - 2022", "location": "", "description": "تنظيم المسارات اليومية لضمان بثّ سلس ومتّسق. تسجيل وتحرير البودكاست لتقديم محتوى راقٍ وجذّاب.", "technologies": [] }
+  { "company": "Ortho Graph", "position": "مطور Fullstack", "period": "2024 - 2025", "location": "", "description": "صيانة backend قائم على Laravel وحوسبته باستخدام Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "فني إنتاج", "period": "2021 - 2022", "location": "", "description": "تنظيم المسارات اليومية لضمان بثّ سلس ومتّسق. تسجيل وتحرير البودكاست لتقديم محتوى راقٍ وجذّاب.", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
     ]
   },
   "achievements": {

@@ -20,9 +20,11 @@
   "workExperience": {
     "jobs": [
       { "company": "ALTEO", "position": "Стажер по электромобильности", "period": "10/2025 - Настоящее время", "location": "Гибрид", "description": "Стажировка в ALTEO с упором на решения в области электромобильности и инициативы в области устойчивой энергетики.", "technologies": [] },
-      { "company": "Camp Cody", "position": "Кухонный помощник", "period": "06/2025 - 09/2025", "location": "США", "description": "Кухонный помощник в США, помогающий обслуживать быструю кухню на 600 человек, изучая командную работу и управление командой.", "technologies": [] },
+  { "company": "ALTEO", "position": "Стажер по электромобильности", "period": "10/2025 - Настоящее время", "location": "Гибрид", "description": "Стажировка в ALTEO с упором на решения в области электромобильности и инициативы в области устойчивой энергетики.", "technologies": [], "logo": "/imgs/companies/alteo.png" },
+  { "company": "Camp Cody", "position": "Кухонный помощник", "period": "06/2025 - 09/2025", "location": "США", "description": "Кухонный помощник в США, помогающий обслуживать быструю кухню на 600 человек, изучая командную работу и управление командой.", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
       { "company": "Ortho Graph", "position": "Fullstack разработчик", "period": "2024 - 2025", "location": "", "description": "Поддержка бэкенда на Laravel и контейнеризация с помощью Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
-      { "company": "Mária Rádió", "position": "Технический специалист", "period": "2021 - 2022", "location": "", "description": "Организация ежедневных треков для обеспечения плавных и последовательных трансляций. Запись и редактирование подкастов для создания качественного и интересного контента.", "technologies": [] }
+  { "company": "Ortho Graph", "position": "Fullstack разработчик", "period": "2024 - 2025", "location": "", "description": "Поддержка бэкенда на Laravel и контейнеризация с помощью Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "Технический специалист", "period": "2021 - 2022", "location": "", "description": "Организация ежедневных треков для обеспечения плавных и последовательных трансляций. Запись и редактирование подкастов для создания качественного и интересного контента.", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
     ]
   },
   "achievements": {

@@ -20,9 +20,11 @@
   "workExperience": {
     "jobs": [
       { "company": "ALTEO", "position": "E-モビリティインターン", "period": "10/2025 - 現在", "location": "ハイブリッド", "description": "ALTEOでのインターンシップで、電動モビリティソリューションと持続可能なエネルギーイニシアチブに焦点を当てています。", "technologies": [] },
-      { "company": "Camp Cody", "position": "キッチンアシスタント", "period": "06/2025 - 09/2025", "location": "アメリカ", "description": "米国でキッチンアシスタントとして、600人向けのペースの速いキッチンを手伝いながら、チームワークとチーム管理を学びました。", "technologies": [] },
+  { "company": "ALTEO", "position": "E-モビリティインターン", "period": "10/2025 - 現在", "location": "ハイブリッド", "description": "ALTEOでのインターンシップで、電動モビリティソリューションと持続可能なエネルギーイニシアチブに焦点を当ています。", "technologies": [], "logo": "/imgs/companies/alteo.png" },
+  { "company": "Camp Cody", "position": "キッチンアシスタント", "period": "06/2025 - 09/2025", "location": "アメリカ", "description": "米国でキッチンアシスタントとして、600人向けのペースの速いキッチンを手伝いながら、チームワークとチーム管理を学びました。", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
       { "company": "Ortho Graph", "position": "フルスタック開発者", "period": "2024 - 2025", "location": "", "description": "Laravelベースのバックエンドを保守し、Dockerでコンテナ化しました。", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
-      { "company": "Mária Rádió", "position": "制作技術者", "period": "2021 - 2022", "location": "", "description": "スムーズで一貫した放送を確保するために日々のトラックを整理。洗練された魅力的なコンテンツを提供するためにポッドキャストを録音・編集。", "technologies": [] }
+  { "company": "Ortho Graph", "position": "フルスタック開発者", "period": "2024 - 2025", "location": "", "description": "Laravelベースのバックエンドを保守し、Dockerでコンテナ化しました。", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "制作技術者", "period": "2021 - 2022", "location": "", "description": "スムーズで一貫した放送を確保するために日々のトラックを整理。洗練された魅力的なコンテンツを提供するためにポッドキャストを録音・編集。", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
     ]
   },
   "achievements": {
