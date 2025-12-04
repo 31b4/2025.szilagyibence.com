@@ -40,7 +40,7 @@
         "company": "Sonrisa",
         "position": "Software Engineer",
         "period": "12/2025 - Present",
-        "location": "",
+        "location": "Hybrid",
         "description": "Developing and writing AI agents.",
         "technologies": [],
         "logo": "/imgs/companies/sonrisa.jpeg"
@@ -67,7 +67,7 @@
         "company": "Ortho Graph",
         "position": "Fullstack Developer",
         "period": "2024 - 2025",
-        "location": "",
+        "location": "Remote",
         "description": "Maintained a Laravel-based backend and containerized it with Docker.",
         "technologies": ["PHP", "Docker", "Docker-compose", "Git"],
         "logo": "/imgs/companies/orthograph.png"
@@ -76,7 +76,7 @@
         "company": "Mária Rádió",
         "position": "Production Technician",
         "period": "2021 - 2022",
-        "location": "",
+        "location": "On-site",
         "description": "Organizing daily tracks to ensure smooth and consistent broadcasts. Recording and editing podcasts to deliver polished and engaging content.",
         "technologies": [],
         "logo": "/imgs/companies/mariaradio.webp"
