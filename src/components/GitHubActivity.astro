@@ -1,266 +1,647 @@
 ---
-// GitHub Activity Feed Component
 const username = '31b4';
 ---
 
 <section id="github-activity" class="relative z-40 py-20 bg-black">
-  <div class="container mx-auto px-6">
-    <div class="flex items-center justify-center gap-3 mb-12">
-      <i class="fa-brands fa-github text-4xl text-blue-400"></i>
-      <h2 class="text-4xl md:text-5xl font-bold text-center">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-          Live on GitHub
+          Activity Pulse
         </span>
       </h2>
+      <p class="text-gray-500 text-sm">Last 365 days on GitHub</p>
     </div>
 
-    <!-- GitHub Stats Cards -->
-    <div class="grid md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
-      <div class="bg-gradient-to-br from-gray-900/80 to-gray-900/40 rounded-xl p-6 border border-gray-800 text-center">
-        <div class="text-4xl font-bold text-blue-400 mb-2" id="repo-count">-</div>
-        <div class="text-gray-400">Public Repositories</div>
+    <div class="relative mb-8">
+      <div id="pulse-loading" class="flex items-center justify-center py-16">
+        <div class="w-8 h-8 border-2 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
       </div>
-      <div class="bg-gradient-to-br from-gray-900/80 to-gray-900/40 rounded-xl p-6 border border-gray-800 text-center">
-        <div class="text-4xl font-bold text-green-400 mb-2" id="commit-count">-</div>
-        <div class="text-gray-400">Commits This Week</div>
-      </div>
-      <div class="bg-gradient-to-br from-gray-900/80 to-gray-900/40 rounded-xl p-6 border border-gray-800 text-center">
-        <div class="text-4xl font-bold text-purple-400 mb-2" id="follower-count">-</div>
-        <div class="text-gray-400">Followers</div>
+
+      <div class="hidden" id="pulse-canvas-container">
+        <canvas
+          id="pulse-canvas"
+          class="w-full cursor-pointer opacity-60 hover:opacity-100 transition-opacity duration-500"
+          style="height: 140px;"
+          data-username={username}
+        ></canvas>
+        
+        <div class="flex items-center justify-between text-xs text-gray-600 mt-3 px-2">
+          <span id="year-start"></span>
+          <span class="text-blue-400">
+            <i class="fa-brands fa-github"></i>
+          </span>
+          <span id="year-end"></span>
+        </div>
       </div>
     </div>
 
-    <!-- Recent Repositories -->
-    <div class="max-w-5xl mx-auto">
-      <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-        <i class="fa-solid fa-code text-blue-400"></i>
-        Recent Activity
-      </h3>
-      
-      <div id="github-repos" class="grid gap-4 mb-8">
-        <!-- Loading state -->
-        <div class="flex items-center justify-center py-12">
-          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400"></div>
-        </div>
+    <div id="quick-stats" class="hidden grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto">
+      <div class="text-center p-3 bg-gray-900/40 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all">
+        <div class="text-2xl font-bold text-blue-400" id="stat-total">-</div>
+        <div class="text-xs text-gray-500 mt-1">Commits</div>
       </div>
-
-      <!-- Contribution Graph -->
-      <div class="bg-gradient-to-br from-gray-900/60 to-gray-900/30 rounded-xl p-6 border border-gray-800">
-        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-          <i class="fa-solid fa-fire text-orange-400"></i>
-          Contribution Activity
-        </h3>
-        <div class="flex items-center justify-center rounded-lg">
-          <img 
-            src={`https://github-readme-activity-graph.vercel.app/graph?username=${username}&theme=github-dark&hide_border=true&area=true&bg_color=0d1117&color=39d353&line=39d353&point=39d353`}
-            alt="GitHub Contribution Chart"
-            class="w-full rounded-lg"
-            loading="lazy"
-          />
-        </div>
+      <div class="text-center p-3 bg-gray-900/40 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all">
+        <div class="text-2xl font-bold text-cyan-400" id="stat-streak">-</div>
+        <div class="text-xs text-gray-500 mt-1">Streak</div>
       </div>
-
-      <!-- GitHub Profile Link -->
-      <div class="text-center mt-8">
-        <a 
-          href={`https://github.com/${username}`}
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105"
-        >
-          <i class="fa-brands fa-github text-xl"></i>
-          <span>View Full GitHub Profile</span>
-          <i class="fa-solid fa-arrow-right text-sm"></i>
-        </a>
+      <div class="text-center p-3 bg-gray-900/40 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all">
+        <div class="text-2xl font-bold text-green-400" id="stat-avg">-</div>
+        <div class="text-xs text-gray-500 mt-1">Avg/Day</div>
+      </div>
+      <div class="text-center p-3 bg-gray-900/40 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all">
+        <div class="text-2xl font-bold text-purple-400" id="stat-peak">-</div>
+        <div class="text-xs text-gray-500 mt-1">Peak</div>
       </div>
     </div>
   </div>
 </section>
 
-<script define:vars={{ username }}>
-  async function fetchGitHubData() {
-    try {
-      // Fetch user data
-      const userResponse = await fetch(`https://api.github.com/users/${username}`);
-      if (!userResponse.ok) throw new Error('Failed to fetch user data');
-      const userData = await userResponse.json();
+<div id="pulse-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center p-4">
+  <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" id="pulse-modal-backdrop"></div>
 
-      // Update stats
-      document.getElementById('repo-count').textContent = userData.public_repos;
-      document.getElementById('follower-count').textContent = userData.followers;
+  <div class="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-gray-800 shadow-2xl max-w-4xl w-full p-6 md:p-8 max-h-[90vh] overflow-auto">
+    <button
+      id="pulse-modal-close"
+      class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-all"
+    >
+      <i class="fa-solid fa-times"></i>
+    </button>
 
-      // Fetch repositories
-      const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
-      if (!reposResponse.ok) throw new Error('Failed to fetch repos');
-      const repos = await reposResponse.json();
+    <div class="text-center mb-6">
+      <h2 class="text-2xl font-semibold mb-1">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+          • Activity Insights •
+        </span>
+      </h2>
+      <p class="text-gray-500 text-sm">Last 365 Days</p>
+    </div>
 
-      // Fetch recent commits for commit count
-      let totalCommits = 0;
-      const oneWeekAgo = new Date();
-      oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-      
-      for (const repo of repos.slice(0, 5)) {
-        try {
-          const commitsResponse = await fetch(
-            `https://api.github.com/repos/${username}/${repo.name}/commits?since=${oneWeekAgo.toISOString()}&author=${username}`
-          );
-          if (commitsResponse.ok) {
-            const commits = await commitsResponse.json();
-            totalCommits += commits.length;
-          }
-        } catch (e) {
-          console.log('Error fetching commits for', repo.name);
-        }
-      }
-      
-      document.getElementById('commit-count').textContent = totalCommits;
+    <!-- Top Stats Row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+      <div class="bg-gray-800/40 rounded-lg p-4 border border-gray-700/50">
+        <div class="text-3xl font-bold text-blue-400 mb-1" id="modal-total">0</div>
+        <div class="text-xs text-gray-500 uppercase tracking-wide">Total</div>
+      </div>
+      <div class="bg-gray-800/40 rounded-lg p-4 border border-gray-700/50">
+        <div class="text-3xl font-bold text-cyan-400 mb-1" id="modal-peak">0</div>
+        <div class="text-xs text-gray-500 uppercase tracking-wide">Peak</div>
+      </div>
+      <div class="bg-gray-800/40 rounded-lg p-4 border border-gray-700/50">
+        <div class="text-3xl font-bold text-green-400 mb-1" id="modal-avg">0</div>
+        <div class="text-xs text-gray-500 uppercase tracking-wide">Avg/Wk</div>
+      </div>
+      <div class="bg-gray-800/40 rounded-lg p-4 border border-gray-700/50">
+        <div class="text-3xl font-bold text-purple-400 mb-1" id="modal-streak">0</div>
+        <div class="text-xs text-gray-500 uppercase tracking-wide">Streak</div>
+      </div>
+    </div>
 
-      // Display repositories
-      const reposContainer = document.getElementById('github-repos');
-      if (!reposContainer) return;
-
-      reposContainer.innerHTML = repos.map(repo => {
-        const updatedDate = new Date(repo.updated_at);
-        const timeAgo = getTimeAgo(updatedDate);
-        
-        return `
-          <a href="${repo.html_url}" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="group bg-gradient-to-br from-gray-900/60 to-gray-900/30 rounded-xl p-6 border border-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10">
-            <div class="flex items-start justify-between gap-4">
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center gap-2 mb-2">
-                  <i class="fa-solid fa-code-branch text-blue-400"></i>
-                  <h4 class="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors truncate">
-                    ${repo.name}
-                  </h4>
-                </div>
-                ${repo.description ? `
-                  <p class="text-gray-400 text-sm mb-3 line-clamp-2">
-                    ${repo.description}
-                  </p>
-                ` : ''}
-                <div class="flex items-center gap-4 text-sm text-gray-500 flex-wrap">
-                  ${repo.language ? `
-                    <span class="flex items-center gap-1">
-                      <span class="w-3 h-3 rounded-full ${getLanguageColor(repo.language)}"></span>
-                      ${repo.language}
-                    </span>
-                  ` : ''}
-                  ${repo.stargazers_count > 0 ? `
-                    <span class="flex items-center gap-1">
-                      <i class="fa-solid fa-star text-yellow-500"></i>
-                      ${repo.stargazers_count}
-                    </span>
-                  ` : ''}
-                  ${repo.forks_count > 0 ? `
-                    <span class="flex items-center gap-1">
-                      <i class="fa-solid fa-code-branch"></i>
-                      ${repo.forks_count}
-                    </span>
-                  ` : ''}
-                  <span class="flex items-center gap-1">
-                    <i class="fa-solid fa-clock"></i>
-                    ${timeAgo}
-                  </span>
-                </div>
-              </div>
-              <i class="fa-solid fa-arrow-right text-gray-600 group-hover:text-blue-400 transition-colors flex-shrink-0"></i>
-            </div>
-          </a>
-        `;
-      }).join('');
-
-    } catch (error) {
-      console.error('Error fetching GitHub data:', error);
-      const reposContainer = document.getElementById('github-repos');
-      if (reposContainer) {
-        reposContainer.innerHTML = `
-          <div class="text-center py-12 text-gray-500">
-            <i class="fa-solid fa-triangle-exclamation text-4xl mb-4"></i>
-            <p>Unable to load GitHub activity. Please try again later.</p>
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+      <!-- Streaks & Activity -->
+      <div class="bg-gray-800/40 rounded-lg p-5 border border-gray-700/50">
+        <h3 class="text-sm font-semibold text-blue-400 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-fire"></i>
+          STREAKS & ACTIVITY
+        </h3>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-gray-400 text-sm">Longest Streak</span>
+            <span class="text-white font-semibold" id="modal-longest-days">0 days</span>
           </div>
-        `;
-      }
-    }
-  }
+          <div class="flex items-center justify-between">
+            <span class="text-gray-400 text-sm">Active Days</span>
+            <span class="text-white font-semibold" id="modal-active">0</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-gray-400 text-sm">Quiet Days</span>
+            <span class="text-white font-semibold" id="modal-quiet">0</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-gray-400 text-sm">Daily Avg</span>
+            <span class="text-white font-semibold" id="modal-daily-avg">0</span>
+          </div>
+        </div>
+      </div>
 
-  function getLanguageColor(language) {
-    const colors = {
-      'JavaScript': 'bg-yellow-400',
-      'TypeScript': 'bg-blue-500',
-      'Python': 'bg-blue-400',
-      'Swift': 'bg-orange-500',
-      'Java': 'bg-red-500',
-      'Go': 'bg-cyan-400',
-      'Rust': 'bg-orange-600',
-      'PHP': 'bg-purple-400',
-      'Ruby': 'bg-red-600',
-      'C': 'bg-gray-500',
-      'C++': 'bg-pink-500',
-      'C#': 'bg-green-600',
-      'HTML': 'bg-orange-600',
-      'CSS': 'bg-blue-600',
-      'Shell': 'bg-green-500',
-    };
-    return colors[language] || 'bg-gray-400';
-  }
+      <!-- Distribution -->
+      <div class="bg-gray-800/40 rounded-lg p-5 border border-gray-700/50">
+        <h3 class="text-sm font-semibold text-blue-400 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-chart-bar"></i>
+          DISTRIBUTION
+        </h3>
+        <div class="grid grid-cols-4 gap-3 text-center">
+          <div>
+            <div class="text-2xl font-bold text-blue-400 mb-1" id="dist-light">0</div>
+            <div class="text-xs text-gray-500">Light</div>
+            <div class="text-xs text-gray-600" id="dist-light-pct">0%</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-cyan-400 mb-1" id="dist-mod">0</div>
+            <div class="text-xs text-gray-500">Mod</div>
+            <div class="text-xs text-gray-600" id="dist-mod-pct">0%</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-green-400 mb-1" id="dist-heavy">0</div>
+            <div class="text-xs text-gray-500">Heavy</div>
+            <div class="text-xs text-gray-600" id="dist-heavy-pct">0%</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-purple-400 mb-1" id="dist-max">0</div>
+            <div class="text-xs text-gray-500">Max</div>
+            <div class="text-xs text-gray-600" id="dist-max-pct">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  function getTimeAgo(date) {
-    const seconds = Math.floor((new Date() - date) / 1000);
-    
-    const intervals = {
-      year: 31536000,
-      month: 2592000,
-      week: 604800,
-      day: 86400,
-      hour: 3600,
-      minute: 60
-    };
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+      <!-- Day -->
+      <div class="bg-gray-800/40 rounded-lg p-5 border border-gray-700/50">
+        <h3 class="text-sm font-semibold text-blue-400 mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-calendar-day"></i>
+          DAY
+        </h3>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-blue-400 mb-2" id="modal-best-day-name">-</div>
+          <div class="text-sm text-gray-400" id="modal-best-day-count">0 contributions</div>
+        </div>
+      </div>
 
-    for (const [unit, secondsInUnit] of Object.entries(intervals)) {
-      const interval = Math.floor(seconds / secondsInUnit);
-      if (interval >= 1) {
-        return `${interval} ${unit}${interval > 1 ? 's' : ''} ago`;
-      }
-    }
-    
-    return 'just now';
-  }
+      <!-- Month -->
+      <div class="bg-gray-800/40 rounded-lg p-5 border border-gray-700/50">
+        <h3 class="text-sm font-semibold text-blue-400 mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-calendar"></i>
+          MONTH
+        </h3>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-blue-400 mb-2" id="modal-best-month-name">-</div>
+          <div class="text-sm text-gray-400" id="modal-best-month-count">0 contributions</div>
+        </div>
+      </div>
+    </div>
 
-  // Load GitHub data when component is visible
-  if (typeof IntersectionObserver !== 'undefined') {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          fetchGitHubData();
-          observer.disconnect();
-        }
-      });
-    }, { threshold: 0.1 });
+    <!-- Weekly -->
+    <div class="bg-gray-800/40 rounded-lg p-5 border border-gray-700/50 mb-4">
+      <h3 class="text-sm font-semibold text-blue-400 mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-chart-line"></i>
+        WEEKLY
+      </h3>
+      <div class="grid grid-cols-3 gap-6 text-center">
+        <div>
+          <div class="text-gray-400 text-sm mb-1">Best Week</div>
+          <div class="text-2xl font-bold text-white" id="modal-best-week">0</div>
+        </div>
+        <div>
+          <div class="text-gray-400 text-sm mb-1">Active Weeks</div>
+          <div class="text-2xl font-bold text-white" id="modal-active-weeks">0</div>
+        </div>
+        <div>
+          <div class="text-gray-400 text-sm mb-1">Total Weeks</div>
+          <div class="text-2xl font-bold text-white">52</div>
+        </div>
+      </div>
+    </div>
 
-    const section = document.getElementById('github-activity');
-    if (section) observer.observe(section);
-  } else {
-    // Fallback for browsers without IntersectionObserver
-    fetchGitHubData();
-  }
-</script>
+    <div class="text-center mt-8">
+      <a
+        href={'https://github.com/' + username}
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all transform hover:scale-105"
+      >
+        <i class="fa-brands fa-github"></i>
+        View on GitHub
+        <i class="fa-solid fa-arrow-right text-sm"></i>
+      </a>
+    </div>
+  </div>
+</div>
 
 <style>
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
   @keyframes spin {
     to { transform: rotate(360deg); }
   }
-
+  
   .animate-spin {
     animation: spin 1s linear infinite;
   }
 </style>
+
+<script>
+  interface ContributionDay {
+    date: string;
+    count: number;
+    level: number;
+  }
+
+  class GitHubPulse {
+    canvas: HTMLCanvasElement;
+    ctx: CanvasRenderingContext2D;
+    username: string;
+    data: ContributionDay[];
+    animationProgress: number;
+    stats: any;
+
+    constructor(canvas: HTMLCanvasElement, username: string) {
+      this.canvas = canvas;
+      const context = canvas.getContext('2d', { alpha: true });
+      if (!context) throw new Error('Canvas context not available');
+      this.ctx = context;
+      this.username = username;
+      this.data = [];
+      this.animationProgress = 0;
+      this.stats = {};
+      
+      this.setupCanvas();
+      this.loadData();
+      this.setupModalHandlers();
+    }
+
+    setupCanvas() {
+      setTimeout(() => {
+        const dpr = window.devicePixelRatio || 1;
+        const rect = this.canvas.getBoundingClientRect();
+
+        if (rect.width === 0) {
+          this.setupCanvas();
+          return;
+        }
+
+        this.canvas.width = rect.width * dpr;
+        this.canvas.height = 140 * dpr;
+        this.ctx.scale(dpr, dpr);
+
+        this.canvas.addEventListener('click', () => this.openModal());
+      }, 100);
+    }
+
+    async loadData() {
+      try {
+        const response = await fetch(
+          `https://github-contributions-api.jogruber.de/v4/${this.username}?y=last`
+        );
+
+        if (!response.ok) throw new Error('Failed to fetch data');
+
+        const result = await response.json();
+        this.data = result.contributions.map((day: any) => ({
+          date: day.date,
+          count: day.count,
+          level: day.level,
+        }));
+
+        document.getElementById('pulse-loading')?.classList.add('hidden');
+        document.getElementById('pulse-canvas-container')?.classList.remove('hidden');
+        document.getElementById('quick-stats')?.classList.remove('hidden');
+
+        this.calculateStats();
+        
+        setTimeout(() => {
+          this.animate();
+        }, 150);
+      } catch (error) {
+        console.error('Error loading GitHub data:', error);
+        document.getElementById('pulse-loading')?.classList.add('hidden');
+      }
+    }
+
+    calculateStats() {
+      const total = this.data.reduce((sum, day) => sum + day.count, 0);
+      const max = Math.max(...this.data.map((d) => d.count));
+      const avgPerDay = (total / this.data.length).toFixed(1);
+      const activeDays = this.data.filter((d) => d.count > 0).length;
+      const quietDays = this.data.length - activeDays;
+
+      let currentStreak = 0;
+      for (let i = this.data.length - 1; i >= 0; i--) {
+        if (this.data[i].count > 0) currentStreak++;
+        else break;
+      }
+
+      let longestStreak = 0;
+      let tempStreak = 0;
+      this.data.forEach((day) => {
+        if (day.count > 0) {
+          tempStreak++;
+          longestStreak = Math.max(longestStreak, tempStreak);
+        } else {
+          tempStreak = 0;
+        }
+      });
+
+      const dayOfWeekCounts: Record<string, number> = { 
+        Sunday: 0, Monday: 0, Tuesday: 0, Wednesday: 0, 
+        Thursday: 0, Friday: 0, Saturday: 0 
+      };
+      const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+      this.data.forEach((day) => {
+        const date = new Date(day.date);
+        dayOfWeekCounts[dayNames[date.getDay()]] += day.count;
+      });
+
+      let bestDay = 'N/A';
+      let bestDayCount = 0;
+      Object.entries(dayOfWeekCounts).forEach(([day, count]) => {
+        if (count > bestDayCount) {
+          bestDayCount = count;
+          bestDay = day;
+        }
+      });
+
+      // Format: "Tuesday (123 commits)"
+      const bestDayFormatted = bestDayCount > 0 
+        ? `${bestDay} (${bestDayCount} commits)` 
+        : 'N/A';
+
+      const monthCounts: Record<string, number> = {};
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+      this.data.forEach((day) => {
+        const date = new Date(day.date);
+        const monthKey = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+        monthCounts[monthKey] = (monthCounts[monthKey] || 0) + day.count;
+      });
+
+      let bestMonth = 'N/A';
+      let bestMonthCount = 0;
+      Object.entries(monthCounts).forEach(([month, count]) => {
+        if (count > bestMonthCount) {
+          bestMonthCount = count;
+          bestMonth = month;
+        }
+      });
+
+      // Format: "Jan 2025 (456 commits)"
+      const bestMonthFormatted = bestMonthCount > 0 
+        ? `${bestMonth} (${bestMonthCount} commits)` 
+        : 'N/A';
+
+      const weeks = [];
+      for (let i = 0; i < this.data.length; i += 7) {
+        const weekData = this.data.slice(i, i + 7);
+        weeks.push(weekData.reduce((sum, day) => sum + day.count, 0));
+      }
+
+      const bestWeek = Math.max(...weeks);
+      const activeWeeks = weeks.filter((w) => w > 0).length;
+      const weeklyAvg = Math.round(total / 52);
+
+      // Calculate distribution (Light, Mod, Heavy, Max)
+      let light = 0, mod = 0, heavy = 0, maxCount = 0;
+      this.data.forEach((day) => {
+        if (day.level === 1) light++;
+        else if (day.level === 2) mod++;
+        else if (day.level === 3) heavy++;
+        else if (day.level === 4) maxCount++;
+      });
+
+      const totalDays = this.data.length;
+      const lightPct = ((light / totalDays) * 100).toFixed(1);
+      const modPct = ((mod / totalDays) * 100).toFixed(1);
+      const heavyPct = ((heavy / totalDays) * 100).toFixed(1);
+      const maxPct = ((maxCount / totalDays) * 100).toFixed(1);
+
+      this.stats = {
+        total,
+        max,
+        avgPerDay,
+        currentStreak,
+        longestStreak,
+        activeDays,
+        quietDays,
+        bestDay,
+        bestDayCount,
+        bestMonth,
+        bestMonthCount,
+        bestWeek,
+        activeWeeks,
+        weeklyAvg,
+        light,
+        mod,
+        heavy,
+        maxCount,
+        lightPct,
+        modPct,
+        heavyPct,
+        maxPct,
+      };
+
+      const statTotal = document.getElementById('stat-total');
+      const statStreak = document.getElementById('stat-streak');
+      const statAvg = document.getElementById('stat-avg');
+      const statPeak = document.getElementById('stat-peak');
+
+      if (statTotal) statTotal.textContent = total.toLocaleString();
+      if (statStreak) statStreak.textContent = currentStreak.toString();
+      if (statAvg) statAvg.textContent = avgPerDay;
+      if (statPeak) statPeak.textContent = max.toString();
+    }
+
+    setupModalHandlers() {
+      const modal = document.getElementById('pulse-modal');
+      const closeBtn = document.getElementById('pulse-modal-close');
+      const backdrop = document.getElementById('pulse-modal-backdrop');
+
+      closeBtn?.addEventListener('click', () => this.closeModal());
+      backdrop?.addEventListener('click', () => this.closeModal());
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.classList.contains('flex')) {
+          this.closeModal();
+        }
+      });
+    }
+
+    openModal() {
+      const modal = document.getElementById('pulse-modal');
+      if (!modal) return;
+
+      // Top stats
+      const modalTotal = document.getElementById('modal-total');
+      const modalPeak = document.getElementById('modal-peak');
+      const modalAvg = document.getElementById('modal-avg');
+      const modalStreak = document.getElementById('modal-streak');
+
+      if (modalTotal) modalTotal.textContent = this.stats.total.toLocaleString();
+      if (modalPeak) modalPeak.textContent = this.stats.max.toString();
+      if (modalAvg) modalAvg.textContent = this.stats.weeklyAvg.toString();
+      if (modalStreak) modalStreak.textContent = this.stats.currentStreak.toString();
+
+      // Streaks & Activity
+      const modalLongestDays = document.getElementById('modal-longest-days');
+      const modalActive = document.getElementById('modal-active');
+      const modalQuiet = document.getElementById('modal-quiet');
+      const modalDailyAvg = document.getElementById('modal-daily-avg');
+
+      if (modalLongestDays) modalLongestDays.textContent = `${this.stats.longestStreak} days`;
+      if (modalActive) modalActive.textContent = this.stats.activeDays.toString();
+      if (modalQuiet) modalQuiet.textContent = this.stats.quietDays.toString();
+      if (modalDailyAvg) modalDailyAvg.textContent = this.stats.avgPerDay;
+
+      // Distribution
+      const distLight = document.getElementById('dist-light');
+      const distMod = document.getElementById('dist-mod');
+      const distHeavy = document.getElementById('dist-heavy');
+      const distMax = document.getElementById('dist-max');
+      const distLightPct = document.getElementById('dist-light-pct');
+      const distModPct = document.getElementById('dist-mod-pct');
+      const distHeavyPct = document.getElementById('dist-heavy-pct');
+      const distMaxPct = document.getElementById('dist-max-pct');
+
+      if (distLight) distLight.textContent = this.stats.light.toString();
+      if (distMod) distMod.textContent = this.stats.mod.toString();
+      if (distHeavy) distHeavy.textContent = this.stats.heavy.toString();
+      if (distMax) distMax.textContent = this.stats.maxCount.toString();
+      if (distLightPct) distLightPct.textContent = `${this.stats.lightPct}%`;
+      if (distModPct) distModPct.textContent = `${this.stats.modPct}%`;
+      if (distHeavyPct) distHeavyPct.textContent = `${this.stats.heavyPct}%`;
+      if (distMaxPct) distMaxPct.textContent = `${this.stats.maxPct}%`;
+
+      // Day & Month
+      const modalBestDayName = document.getElementById('modal-best-day-name');
+      const modalBestDayCount = document.getElementById('modal-best-day-count');
+      const modalBestMonthName = document.getElementById('modal-best-month-name');
+      const modalBestMonthCount = document.getElementById('modal-best-month-count');
+
+      if (modalBestDayName) modalBestDayName.textContent = this.stats.bestDay;
+      if (modalBestDayCount) modalBestDayCount.textContent = `${this.stats.bestDayCount} contributions`;
+      if (modalBestMonthName) modalBestMonthName.textContent = this.stats.bestMonth;
+      if (modalBestMonthCount) modalBestMonthCount.textContent = `${this.stats.bestMonthCount} contributions`;
+
+      // Weekly
+      const modalBestWeek = document.getElementById('modal-best-week');
+      const modalActiveWeeks = document.getElementById('modal-active-weeks');
+
+      if (modalBestWeek) modalBestWeek.textContent = this.stats.bestWeek.toString();
+      if (modalActiveWeeks) modalActiveWeeks.textContent = this.stats.activeWeeks.toString();
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    closeModal() {
+      const modal = document.getElementById('pulse-modal');
+      if (!modal) return;
+
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    animate() {
+      if (this.animationProgress < 1) {
+        this.animationProgress += 0.02;
+        this.render();
+        requestAnimationFrame(() => this.animate());
+      } else {
+        this.animationProgress = 1;
+        this.render();
+      }
+    }
+
+    render() {
+      const width = this.canvas.getBoundingClientRect().width;
+      const height = 140;
+      const padding = 20;
+
+      this.ctx.clearRect(0, 0, width, height);
+
+      if (this.data.length === 0) return;
+
+      const dataWidth = width - padding * 2;
+      const dataHeight = height - padding * 2;
+      const max = Math.max(...this.data.map((d) => d.count), 1);
+
+      const sampleRate = Math.max(1, Math.floor(this.data.length / Math.min(width, 400)));
+      const sampledData = this.data.filter((_, i) => i % sampleRate === 0 || i === this.data.length - 1);
+      const pointSpacing = dataWidth / (sampledData.length - 1);
+
+      const gradient = this.ctx.createLinearGradient(0, padding, 0, height - padding);
+      gradient.addColorStop(0, 'rgba(96, 165, 250, 0.2)');
+      gradient.addColorStop(0.5, 'rgba(96, 165, 250, 0.1)');
+      gradient.addColorStop(1, 'rgba(96, 165, 250, 0)');
+
+      this.ctx.beginPath();
+      this.ctx.moveTo(padding, height - padding);
+
+      sampledData.forEach((day, i) => {
+        const actualIndex = this.data.indexOf(day);
+        const x = padding + i * pointSpacing;
+        const progress = Math.min(actualIndex / this.data.length / this.animationProgress, 1);
+        const y = height - padding - (day.count / max) * dataHeight * progress;
+
+        if (i === 0) {
+          this.ctx.lineTo(x, y);
+        } else {
+          const prevDay = sampledData[i - 1];
+          const prevX = padding + (i - 1) * pointSpacing;
+          const prevProgress = Math.min(this.data.indexOf(prevDay) / this.data.length / this.animationProgress, 1);
+          const prevY = height - padding - (prevDay.count / max) * dataHeight * prevProgress;
+
+          const cpX = (prevX + x) / 2;
+          const cpY = (prevY + y) / 2;
+
+          this.ctx.quadraticCurveTo(cpX, cpY, x, y);
+        }
+      });
+
+      this.ctx.lineTo(padding + (sampledData.length - 1) * pointSpacing, height - padding);
+      this.ctx.lineTo(padding, height - padding);
+      this.ctx.closePath();
+      this.ctx.fillStyle = gradient;
+      this.ctx.fill();
+
+      this.ctx.beginPath();
+      sampledData.forEach((day, i) => {
+        const actualIndex = this.data.indexOf(day);
+        const x = padding + i * pointSpacing;
+        const progress = Math.min(actualIndex / this.data.length / this.animationProgress, 1);
+        const y = height - padding - (day.count / max) * dataHeight * progress;
+
+        if (i === 0) {
+          this.ctx.moveTo(x, y);
+        } else {
+          const prevDay = sampledData[i - 1];
+          const prevX = padding + (i - 1) * pointSpacing;
+          const prevProgress = Math.min(this.data.indexOf(prevDay) / this.data.length / this.animationProgress, 1);
+          const prevY = height - padding - (prevDay.count / max) * dataHeight * prevProgress;
+
+          const cpX = (prevX + x) / 2;
+          const cpY = (prevY + y) / 2;
+
+          this.ctx.quadraticCurveTo(cpX, cpY, x, y);
+        }
+      });
+
+      this.ctx.strokeStyle = 'rgba(96, 165, 250, 0.8)';
+      this.ctx.lineWidth = 2;
+      this.ctx.stroke();
+    }
+  }
+
+  const initPulse = () => {
+    const canvas = document.getElementById('pulse-canvas') as HTMLCanvasElement | null;
+    if (canvas && !canvas.dataset.initialized) {
+      canvas.dataset.initialized = 'true';
+      new GitHubPulse(canvas, '31b4');
+    }
+
+    // Set dynamic year labels
+    const currentYear = new Date().getFullYear();
+    const yearStart = document.getElementById('year-start');
+    const yearEnd = document.getElementById('year-end');
+    if (yearStart) yearStart.textContent = (currentYear - 1).toString();
+    if (yearEnd) yearEnd.textContent = currentYear.toString();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPulse);
+  } else {
+    initPulse();
+  }
+
+  document.addEventListener('astro:page-load', initPulse);
+</script>
