@@ -11,9 +11,9 @@
       <!-- Terminal Header -->
       <div class="bg-gray-800 px-4 py-3 flex items-center gap-2 border-b border-gray-700">
         <div class="flex gap-2">
-          <div class="w-3 h-3 rounded-full bg-red-500"></div>
-          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <button id="terminal-close" class="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors cursor-pointer" aria-label="Close"></button>
+          <button id="terminal-minimize" class="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors cursor-pointer" aria-label="Minimize"></button>
+          <button id="terminal-maximize" class="w-3 h-3 rounded-full bg-green-500 hover:bg-green-600 transition-colors cursor-pointer" aria-label="Maximize"></button>
         </div>
         <span class="text-gray-400 text-sm ml-2 font-mono">terminal@szilagyibence.com</span>
       </div>
@@ -167,15 +167,29 @@
   function openPalette() {
     if (!palette) return;
     palette.classList.remove('hidden');
-    setTimeout(() => input?.focus(), 100);
+    palette.classList.add('palette-opening');
+    setTimeout(() => {
+      palette?.classList.remove('palette-opening');
+      input?.focus();
+    }, 200);
   }
 
   function closePalette() {
     if (!palette) return;
-    palette.classList.add('hidden');
-    if (input) input.value = '';
-    selectedIndex = 0;
-    updateSelection();
+    palette.classList.add('palette-closing');
+    setTimeout(() => {
+      palette?.classList.add('hidden');
+      palette?.classList.remove('palette-closing');
+      if (input) input.value = '';
+      selectedIndex = 0;
+      updateSelection();
+      // Reset maximize state
+      if (isMaximized && terminalWindow) {
+        terminalWindow.classList.remove('max-w-full', 'h-full', 'rounded-none');
+        terminalWindow.classList.add('max-w-2xl', 'rounded-2xl');
+        isMaximized = false;
+      }
+    }, 200);
   }
 
   function updateSelection() {
@@ -271,22 +285,97 @@
     });
   });
 
+  // Terminal button handlers
+  const closeButton = document.getElementById('terminal-close');
+  const minimizeButton = document.getElementById('terminal-minimize');
+  const maximizeButton = document.getElementById('terminal-maximize');
+  const terminalWindow = palette?.querySelector('.max-w-2xl') as HTMLElement;
+
+  closeButton?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closePalette();
+  });
+
+  minimizeButton?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closePalette();
+  });
+
+  let isMaximized = false;
+  maximizeButton?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (terminalWindow) {
+      if (isMaximized) {
+        terminalWindow.classList.remove('max-w-full', 'h-full', 'rounded-none');
+        terminalWindow.classList.add('max-w-2xl', 'rounded-2xl');
+        isMaximized = false;
+      } else {
+        terminalWindow.classList.remove('max-w-2xl', 'rounded-2xl');
+        terminalWindow.classList.add('max-w-full', 'h-full', 'rounded-none');
+        isMaximized = true;
+      }
+    }
+  });
+
   // Initial selection
   updateSelection();
 </script>
 
 <style>
-  #command-palette {
-    animation: fadeIn 0.15s ease-out;
+  @keyframes paletteSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 
-  @keyframes fadeIn {
+  @keyframes paletteSlideOut {
+    from {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.95);
+    }
+  }
+
+  @keyframes backdropFadeIn {
     from {
       opacity: 0;
     }
     to {
       opacity: 1;
     }
+  }
+
+  @keyframes backdropFadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .palette-opening {
+    animation: backdropFadeIn 0.2s ease-out;
+  }
+
+  .palette-opening > .relative > div {
+    animation: paletteSlideIn 0.2s ease-out;
+  }
+
+  .palette-closing {
+    animation: backdropFadeOut 0.2s ease-in;
+  }
+
+  .palette-closing > .relative > div {
+    animation: paletteSlideOut 0.2s ease-in;
   }
 
   .command-item {
