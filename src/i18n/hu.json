@@ -26,12 +26,62 @@
   },
   "sections": {
     "projects": "Projektek",
+    "workExperience": "Munkatapasztalat",
     "achievements": "Eredmények",
     "skills": "Amit építeni tudok",
     "contact": "Kapcsolat"
   },
   "contact": {
     "cta": "Kapcsolódjunk és építsünk valami nagyszerűt együtt!"
+  },
+  "workExperience": {
+    "jobs": [
+      {
+        "company": "Sonrisa",
+        "position": "Szoftvermérnök",
+        "period": "12/2025 - Jelen",
+        "location": "Hibrid",
+        "description": "AI agentek fejlesztése és írása.",
+        "technologies": [],
+        "logo": "/imgs/companies/sonrisa.jpeg"
+      },
+      {
+        "company": "ALTEO",
+        "position": "E-mobilitás gyakornok",
+        "period": "10/2025 - Jelen",
+        "location": "Hibrid",
+        "description": "ALTEO-nál gyakornoki pozíció, elektromos mobilitási megoldásokra és fenntartható energia kezdeményezésekre összpontosítva.",
+        "technologies": [],
+        "logo": "/imgs/companies/alteo.png"
+      },
+      {
+        "company": "Camp Cody",
+        "position": "Konyhai asszisztens",
+        "period": "06/2025 - 09/2025",
+        "location": "USA",
+        "description": "Konyhai asszisztens az Egyesült Államokban, ahol egy 600 főt kiszolgáló, gyors tempójú konyhában segítettem, miközben megtanultam a csapatmunkát és a csapatirányítás alapjait.",
+        "technologies": [],
+        "logo": "/imgs/companies/campcody.jpeg"
+      },
+      {
+        "company": "Ortho Graph",
+        "position": "Fullstack Developer",
+        "period": "2024 - 2025",
+        "location": "",
+        "description": "Laravel-alapú backendet tartottam karban, és konténerizáltam Docker segítségével.",
+        "technologies": ["PHP", "Docker", "Docker-compose", "Git"],
+        "logo": "/imgs/companies/orthograph.png"
+      },
+      {
+        "company": "Mária Rádió",
+        "position": "Produkciós Technikus",
+        "period": "2021 - 2022",
+        "location": "",
+        "description": "Napi műsorok szervezése a zökkenőmentes és következetes közvetítések biztosítása érdekében. Podcastok felvétele és szerkesztése a kifinomult és lebilincselő tartalom eléréséhez.",
+        "technologies": [],
+        "logo": "/imgs/companies/mariaradio.webp"
+      }
+    ]
   },
   "achievements": {
     "aocThanks": "Remek rejtvények, köszönet",
@@ -55,6 +105,11 @@
     "infra": "Infrastruktúra és DevOps"
   },
   "projects": {
+    "finance": {
+      "subtitle": "Önhostolt személyes pénzügyi alkalmazás.",
+      "detail": "Biztonságos, önmagad által hosztolt pénzügykezelő alkalmazás React és Cloudflare Workers használatával. Számlák, tranzakciók és elemzések nyomon követése.",
+      "repo": ""
+    },
     "inviso": {
       "subtitle": "A világ legbiztonságosabb csevegőalkalmazása.",
       "detail": "Peer-to-peer, végpontok közti titkosítású üzenetküldés előzmények és mentett felhasználói adatok nélkül.",

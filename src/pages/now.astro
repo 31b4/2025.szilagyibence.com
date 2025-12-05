@@ -1,0 +1,223 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import { loadDictionary } from "../i18n";
+
+const locale = 'en';
+const t = await loadDictionary(locale);
+
+// Fetch recent GitHub activity
+const username = '31b4';
+let recentRepos: any[] = [];
+let commitCount = 0;
+
+try {
+  const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
+  if (reposResponse.ok) {
+    recentRepos = await reposResponse.json();
+  }
+} catch (e) {
+  console.error('Failed to fetch GitHub data:', e);
+}
+---
+
+<MainLayout title="What I'm Doing Now | Bence Szilagyi" lang="en">
+  <fragment slot="head">
+    <meta name="description" content="What Bence Szilagyi is currently working on - projects, learning, and life updates." />
+    <meta name="robots" content="index, follow" />
+  </fragment>
+
+  <div class="min-h-screen bg-black text-white">
+    <NavBar t={t} lang={locale} />
+    
+    <main class="container mx-auto px-6 pt-32 pb-20 max-w-4xl">
+      <!-- Header -->
+      <div class="mb-16 animate-fade-in">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+            What I'm Doing Now
+          </span>
+        </h1>
+        <p class="text-gray-400 text-lg">
+          Last updated: <time datetime="2025-12-05">December 5, 2025</time>
+        </p>
+      </div>
+
+      <!-- Current Focus -->
+      <section class="mb-16 space-y-8">
+        <div class="bg-gradient-to-br from-gray-900/80 to-gray-900/40 rounded-2xl p-8 border border-gray-800">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-4xl">🚀</span>
+            <h2 class="text-3xl font-bold text-white">Current Project</h2>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-2xl font-semibold text-blue-400">Inviso - Secure Chat App</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Building the most secure peer-to-peer, end-to-end encrypted messenger. 
+              No history, no user data saved, complete privacy. Working on WebRTC 
+              implementation and perfecting the encryption layer.
+            </p>
+            <a href="https://inviso.szilagyibence.com" target="_blank" rel="noopener" 
+               class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+              <span>Try it out</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Work & Education -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-gray-900/60 to-gray-900/30 rounded-xl p-6 border border-gray-800">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-3xl">💼</span>
+              <h3 class="text-xl font-bold text-white">Work</h3>
+            </div>
+            <ul class="space-y-2 text-gray-300">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-1">•</span>
+                <span>Software Engineer at <strong class="text-white">Sonrisa</strong> - Developing AI agents</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-400 mt-1">•</span>
+                <span>E-mobility Intern at <strong class="text-white">ALTEO</strong></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-br from-gray-900/60 to-gray-900/30 rounded-xl p-6 border border-gray-800">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-3xl">🥊</span>
+              <h3 class="text-xl font-bold text-white">Training</h3>
+            </div>
+            <p class="text-gray-300">
+              6 days a week of weight training - discipline in the gym translates to 
+              discipline in code. Balance is everything.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent GitHub Activity -->
+      <section class="mb-16">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fa-brands fa-github text-3xl text-blue-400"></i>
+          <h2 class="text-3xl font-bold text-white">Recent GitHub Activity</h2>
+        </div>
+        
+        <div class="grid gap-4">
+          {recentRepos.length > 0 ? (
+            recentRepos.map((repo: any) => (
+              <a href={repo.html_url} target="_blank" rel="noopener"
+                 class="group bg-gray-900/50 rounded-xl p-6 border border-gray-800 hover:border-blue-500/50 transition-all duration-300">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex-1">
+                    <h3 class="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
+                      {repo.name}
+                    </h3>
+                    {repo.description && (
+                      <p class="text-gray-400 text-sm mb-3">{repo.description}</p>
+                    )}
+                    <div class="flex items-center gap-4 text-sm text-gray-500">
+                      {repo.language && (
+                        <span class="flex items-center gap-1">
+                          <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                          {repo.language}
+                        </span>
+                      )}
+                      {repo.stargazers_count > 0 && (
+                        <span class="flex items-center gap-1">
+                          <i class="fa-solid fa-star text-yellow-500"></i>
+                          {repo.stargazers_count}
+                        </span>
+                      )}
+                      <span class="flex items-center gap-1">
+                        <i class="fa-solid fa-code-branch"></i>
+                        {repo.forks_count}
+                      </span>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-arrow-right text-gray-600 group-hover:text-blue-400 transition-colors"></i>
+                </div>
+              </a>
+            ))
+          ) : (
+            <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800 text-center text-gray-500">
+              Loading GitHub activity...
+            </div>
+          )}
+        </div>
+
+        <div class="mt-6 text-center">
+          <a href="https://github.com/31b4" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
+            <i class="fa-brands fa-github"></i>
+            <span>View Full GitHub Profile</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Learning & Reading -->
+      <section class="mb-16">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="text-3xl">📚</span>
+          <h2 class="text-3xl font-bold text-white">Learning & Exploring</h2>
+        </div>
+        
+        <div class="bg-gradient-to-br from-gray-900/60 to-gray-900/30 rounded-xl p-6 border border-gray-800">
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 mt-1">→</span>
+              <span>Deep diving into <strong class="text-white">WebRTC</strong> for real-time communication</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 mt-1">→</span>
+              <span>Exploring <strong class="text-white">cryptography</strong> and end-to-end encryption best practices</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 mt-1">→</span>
+              <span>Building <strong class="text-white">AI agents</strong> at Sonrisa</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 mt-1">→</span>
+              <span>Participating in <a href="https://github.com/31b4/advent-of-code-2025" target="_blank" rel="noopener" class="text-white hover:text-blue-400 transition-colors underline"><strong>Advent of Code 2025</strong></a> daily challenges</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section class="text-center">
+        <div class="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl p-8 border border-blue-500/30">
+          <h2 class="text-2xl font-bold text-white mb-4">Want to collaborate?</h2>
+          <p class="text-gray-300 mb-6">
+            I'm always open to interesting projects and conversations.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="mailto:contact@szilagyibence.com" 
+               class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+              Get in Touch
+            </a>
+            <a href="/#projects" 
+               class="px-8 py-3 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white rounded-lg font-medium transition-all duration-300">
+              View My Work
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer t={t} />
+  </div>
+</MainLayout>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+</style>

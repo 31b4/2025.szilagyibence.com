@@ -15,8 +15,16 @@
     "contactMe": "Kontak",
     "downloadCV": "Unduh CV"
   },
-  "sections": { "projects": "Proyek", "achievements": "Pencapaian", "skills": "Apa yang bisa saya bangun", "contact": "Kontak" },
+  "sections": { "projects": "Proyek", "workExperience": "Pengalaman Kerja", "achievements": "Pencapaian", "skills": "Apa yang bisa saya bangun", "contact": "Kontak" },
   "contact": { "cta": "Ayo terhubung dan bangun sesuatu yang luar biasa bersama!" },
+  "workExperience": {
+    "jobs": [
+  { "company": "ALTEO", "position": "Magang E-mobilitas", "period": "10/2025 - Sekarang", "location": "Hibrida", "description": "Magang di ALTEO dengan fokus pada solusi mobilitas listrik dan inisiatif energi berkelanjutan.", "technologies": [], "logo": "/imgs/companies/alteo.png" },
+  { "company": "Camp Cody", "position": "Asisten Dapur", "period": "06/2025 - 09/2025", "location": "AS", "description": "Asisten dapur di AS, membantu melayani dapur yang sibuk untuk 600 orang sambil belajar kerja tim dan manajemen tim.", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
+  { "company": "Ortho Graph", "position": "Pengembang Fullstack", "period": "2024 - 2025", "location": "", "description": "Memelihara backend berbasis Laravel dan mengontainerisasinya dengan Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "Teknisi Produksi", "period": "2021 - 2022", "location": "", "description": "Mengatur trek harian untuk memastikan siaran yang lancar dan konsisten. Merekam dan mengedit podcast untuk memberikan konten yang halus dan menarik.", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
+    ]
+  },
   "achievements": {
     "aocThanks": "Teka-teki yang luar biasa, terima kasih kepada",
     "round1": "Ronde 1",
@@ -29,6 +37,7 @@
   },
   "skills": { "mobile": "Pengembangan Mobile", "web": "Pengembangan Web", "infra": "Infrastruktur & DevOps" },
   "projects": {
+  "finance": { "subtitle": "Manajer keuangan pribadi yang di-host sendiri.", "detail": "Aplikasi keuangan pribadi yang aman dan di-host sendiri dibangun dengan React dan Cloudflare Workers. Lacak akun, transaksi, dan analitik.", "repo": "" },
   "inviso": { "subtitle": "Aplikasi chat paling aman di dunia.", "detail": "Pesan P2P terenkripsi ujung-ke-ujung tanpa riwayat atau data pengguna yang disimpan.", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "Pelacak kesehatan & kebugaran lintas platform.", "detail": "Integrasi Apple HealthKit dengan Swift + backend PostgreSQL." },
     "univerx": { "subtitle": "Satu-satunya aplikasi kampus yang Anda butuhkan.", "detail": "Kelola kelas, ujian, dan banyak lagi." },

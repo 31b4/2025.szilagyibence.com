@@ -5,10 +5,13 @@ import NavBar from "../components/NavBar.astro";
 import Hero from "../components/Hero.astro";
 import Projects from "../components/Sections/Projects.astro";
 import About from "../components/Sections/About.astro";
+import WorkExperience from "../components/Sections/WorkExperience.astro";
 import Achievements from "../components/Sections/Achievements.astro";
 import Skills from "../components/Sections/Skills.astro";
 import Contact from "../components/Sections/Contact.astro";
 import Footer from "../components/Footer.astro";
+import CommandPalette from "../components/CommandPalette.astro";
+import GitHubActivity from "../components/GitHubActivity.astro";
 import { loadDictionary } from "../i18n";
 
 const locale = 'en';
@@ -76,6 +79,7 @@ const pageTitle = t.meta?.title ?? "Bence Szilagyi | Developer & Creator | Hunga
 
   <h1 class="sr-only">Bence Szilagyi — Developer & Creator from Hungary</h1>
 
+  <CommandPalette />
   <StarsBackground />
   <NavBar t={t} lang={locale} />
   <Hero t={t} />
@@ -85,10 +89,12 @@ const pageTitle = t.meta?.title ?? "Bence Szilagyi | Developer & Creator | Hunga
   <div class="relative z-40">
     <About t={t} />
     <Projects t={t} />
+    <WorkExperience t={t} />
   </div>
 
   <Achievements t={t} />
   <Skills t={t} />
+  <GitHubActivity />
   <Contact t={t} />
   <Footer t={t} />
 

@@ -24,12 +24,23 @@
   },
   "sections": {
     "projects": "项目",
+    "workExperience": "工作经历",
     "achievements": "成就",
     "skills": "我能构建什么",
     "contact": "联系我"
   },
   "contact": {
     "cta": "一起连接，共同创造出色的作品！"
+  },
+  "workExperience": {
+    "jobs": [
+      { "company": "ALTEO", "position": "电动出行实习生", "period": "10/2025 - 至今", "location": "混合", "description": "在ALTEO实习，专注于电动出行解决方案和可持续能源计划。", "technologies": [] },
+  { "company": "ALTEO", "position": "电动出行实习生", "period": "10/2025 - 至今", "location": "混合", "description": "在ALTEO实习，专注于电动出行解决方案和可持续能源计划。", "technologies": [], "logo": "/imgs/companies/alteo.png" },
+  { "company": "Camp Cody", "position": "厨房助理", "period": "06/2025 - 09/2025", "location": "美国", "description": "在美国担任厨房助理，帮助为600人提供快节奏的厨房服务，同时学习团队合作和团队管理。", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
+      { "company": "Ortho Graph", "position": "全栈开发者", "period": "2024 - 2025", "location": "", "description": "维护基于Laravel的后端并使用Docker进行容器化。", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
+  { "company": "Ortho Graph", "position": "全栈开发者", "period": "2024 - 2025", "location": "", "description": "维护基于Laravel的后端并使用Docker进行容器化。", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "制作技术员", "period": "2021 - 2022", "location": "", "description": "组织日常节目以确保流畅一致的广播。录制和编辑播客以提供精良且引人入胜的内容。", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
+    ]
   },
   "achievements": {
     "aocThanks": "精彩的谜题，感谢",
@@ -47,6 +58,11 @@
     "infra": "基础设施与 DevOps"
   },
   "projects": {
+    "finance": {
+      "subtitle": "自托管的个人理财管理器。",
+      "detail": "使用 React 和 Cloudflare Workers 构建的安全、自托管的个人理财应用。跟踪账户、交易和分析。",
+      "repo": ""
+    },
     "inviso": {
       "subtitle": "全球最安全的聊天应用。",
       "detail": "点对点端到端加密通信，无聊天记录与用户数据保存。",

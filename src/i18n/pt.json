@@ -15,8 +15,17 @@
     "contactMe": "Contato",
     "downloadCV": "Baixar CV"
   },
-  "sections": { "projects": "Projetos", "achievements": "Conquistas", "skills": "O que posso construir", "contact": "Contato" },
+  "sections": { "projects": "Projetos", "workExperience": "Experiência Profissional", "achievements": "Conquistas", "skills": "O que posso construir", "contact": "Contato" },
   "contact": { "cta": "Vamos nos conectar e construir algo incrível juntos!" },
+  "workExperience": {
+    "jobs": [
+  { "company": "ALTEO", "position": "Estagiário de E-mobilidade", "period": "10/2025 - Presente", "location": "Híbrido", "description": "Estágio na ALTEO com foco em soluções de mobilidade elétrica e iniciativas de energia sustentável.", "technologies": [], "logo": "/imgs/companies/alteo.png" },
+      { "company": "Camp Cody", "position": "Assistente de Cozinha", "period": "06/2025 - 09/2025", "location": "EUA", "description": "Assistente de cozinha nos EUA, ajudando a servir uma cozinha de ritmo rápido para 600 pessoas enquanto aprendia trabalho em equipe e gestão de equipes.", "technologies": [] },
+  { "company": "Camp Cody", "position": "Assistente de Cozinha", "period": "06/2025 - 09/2025", "location": "EUA", "description": "Assistente de cozinha nos EUA, ajudando a servir uma cozinha de ritmo rápido para 600 pessoas enquanto aprendia trabalho em equipe e gestão de equipes.", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
+  { "company": "Ortho Graph", "position": "Desenvolvedor Fullstack", "period": "2024 - 2025", "location": "", "description": "Manutenção de um backend baseado em Laravel e containerização com Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "Técnico de Produção", "period": "2021 - 2022", "location": "", "description": "Organização de faixas diárias para garantir transmissões suaves e consistentes. Gravação e edição de podcasts para entregar conteúdo polido e envolvente.", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
+    ]
+  },
   "achievements": {
     "aocThanks": "Quebra-cabeças incríveis, obrigado a",
     "round1": "Rodada 1",
@@ -29,6 +38,7 @@
   },
   "skills": { "mobile": "Desenvolvimento mobile", "web": "Desenvolvimento web", "infra": "Infraestrutura e DevOps" },
   "projects": {
+  "finance": { "subtitle": "Gerenciador financeiro pessoal auto-hospedado.", "detail": "Aplicativo de finanças pessoais seguro e auto-hospedado construído com React e Cloudflare Workers. Acompanhe contas, transações e análises.", "repo": "" },
   "inviso": { "subtitle": "O app de chat mais seguro do mundo.", "detail": "Mensageria P2P criptografada ponta a ponta, sem histórico nem dados de usuário retidos.", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "Rastreador de saúde e fitness multiplataforma.", "detail": "Integração Apple HealthKit com Swift + backend PostgreSQL." },
     "univerx": { "subtitle": "O único app universitário que você precisa.", "detail": "Gerencie suas aulas, provas e muito mais." },

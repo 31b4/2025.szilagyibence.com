@@ -26,12 +26,53 @@
   },
   "sections": {
     "projects": "Proyectos",
+    "workExperience": "Experiencia Laboral",
     "achievements": "Logros",
     "skills": "Lo que puedo construir",
     "contact": "Contacto"
   },
   "contact": {
     "cta": "¡Conectemos y construyamos algo increíble juntos!"
+  },
+  "workExperience": {
+    "jobs": [
+      {
+        "company": "ALTEO",
+        "position": "Pasante de E-movilidad",
+        "period": "10/2025 - Presente",
+        "location": "Híbrido",
+        "description": "Pasantía en ALTEO enfocada en soluciones de movilidad eléctrica e iniciativas de energía sostenible.",
+        "technologies": [],
+        "logo": "/imgs/companies/alteo.png"
+      },
+      {
+        "company": "Camp Cody",
+        "position": "Asistente de Cocina",
+        "period": "06/2025 - 09/2025",
+        "location": "EE.UU.",
+        "description": "Asistente de cocina en EE.UU., ayudando a servir una cocina de ritmo rápido para 600 personas mientras aprendía trabajo en equipo y gestión de equipos.",
+        "technologies": [],
+        "logo": "/imgs/companies/campcody.jpeg"
+      },
+      {
+        "company": "Ortho Graph",
+        "position": "Desarrollador Fullstack",
+        "period": "2024 - 2025",
+        "location": "",
+        "description": "Mantenimiento de un backend basado en Laravel y su containerización con Docker.",
+        "technologies": ["PHP", "Docker", "Docker-compose", "Git"],
+        "logo": "/imgs/companies/orthograph.png"
+      },
+      {
+        "company": "Mária Rádió",
+        "position": "Técnico de Producción",
+        "period": "2021 - 2022",
+        "location": "",
+        "description": "Organización de pistas diarias para garantizar transmisiones fluidas y consistentes. Grabación y edición de podcasts para entregar contenido pulido y atractivo.",
+        "technologies": [],
+        "logo": "/imgs/companies/mariaradio.webp"
+      }
+    ]
   },
   "achievements": {
     "aocThanks": "Acertijos increíbles, gracias a",
@@ -55,6 +96,11 @@
     "infra": "Infraestructura y DevOps"
   },
   "projects": {
+    "finance": {
+      "subtitle": "Administrador financiero personal autoalojado.",
+      "detail": "Aplicación de finanzas personales segura y autoalojada construida con React y Cloudflare Workers. Seguimiento de cuentas, transacciones y análisis.",
+      "repo": ""
+    },
     "inviso": {
       "subtitle": "La app de chat más segura del mundo.",
       "detail": "Mensajería P2P con cifrado de extremo a extremo, sin historial ni datos de usuario guardados.",

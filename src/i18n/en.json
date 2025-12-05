@@ -11,7 +11,9 @@
     "repository": "Repository",
     "resume": "Resume",
     "resumeEnglish": "English Resume",
-    "resumeHungarian": "Hungarian Resume"
+    "resumeHungarian": "Hungarian Resume",
+    "commandPalette": "Command Palette",
+    "pressKey": "Press"
   },
   "hero": {
     "tagline": "Entrepreneur, developer and boxer with unlimited ambition."
@@ -26,12 +28,64 @@
   },
   "sections": {
     "projects": "Projects",
+    "workExperience": "Work Experience",
     "achievements": "Achievements",
     "skills": "What I Can Build",
-    "contact": "Contact Me"
+    "contact": "Contact Me",
+    "now": "What I'm Doing Now",
+    "github": "Live on GitHub"
   },
   "contact": {
     "cta": "Let's connect and build something amazing together!"
+  },
+  "workExperience": {
+    "jobs": [
+      {
+        "company": "Sonrisa",
+        "position": "Software Engineer",
+        "period": "12/2025 - Present",
+        "location": "Hybrid",
+        "description": "Developing and writing AI agents.",
+        "technologies": [],
+        "logo": "/imgs/companies/sonrisa.jpeg"
+      },
+      {
+        "company": "ALTEO",
+        "position": "E-mobility Intern",
+        "period": "10/2025 - Present",
+        "location": "Hybrid",
+        "description": "Internship at ALTEO focusing on e-mobility solutions and sustainable energy initiatives.",
+        "technologies": [],
+        "logo": "/imgs/companies/alteo.png"
+      },
+      {
+        "company": "Camp Cody",
+        "position": "Kitchen Assistant",
+        "period": "06/2025 - 09/2025",
+        "location": "USA",
+        "description": "Kitchen Assistant in the U.S., helping serve a fast-paced kitchen for 600 people while learning teamwork and team management.",
+        "technologies": [],
+        "logo": "/imgs/companies/campcody.jpeg"
+      },
+      {
+        "company": "Ortho Graph",
+        "position": "Fullstack Developer",
+        "period": "2024 - 2025",
+        "location": "Remote",
+        "description": "Maintained a Laravel-based backend and containerized it with Docker.",
+        "technologies": ["PHP", "Docker", "Docker-compose", "Git"],
+        "logo": "/imgs/companies/orthograph.png"
+      },
+      {
+        "company": "Mária Rádió",
+        "position": "Production Technician",
+        "period": "2021 - 2022",
+        "location": "On-site",
+        "description": "Organizing daily tracks to ensure smooth and consistent broadcasts. Recording and editing podcasts to deliver polished and engaging content.",
+        "technologies": [],
+        "logo": "/imgs/companies/mariaradio.webp"
+      }
+    ]
   },
   "achievements": {
     "aocThanks": "Amazing puzzles, thanks to",
@@ -40,7 +94,7 @@
     "round3": "Round 3",
     "final": "Final",
     "aoc": {
-      "title": "Advent of Code - 2022-24"
+      "title": "Advent of Code - 2022-25"
     },
     "bbb": {
       "title": "Bakonyi Bittfarago Bajnokság - 2022",
@@ -57,6 +111,11 @@
     "infra": "Infrastructure & DevOps"
   },
   "projects": {
+        "finance": {
+          "subtitle": "Self-hosted personal finance manager.",
+          "detail": "Secure, self-hosted personal finance app built with React and Cloudflare Workers. Track accounts, transactions and analytics.",
+          "repo": ""
+        },
         "inviso": {
           "subtitle": "The most secure chat app in the world.",
           "detail": "A peer-to-peer, end-to-end encrypted messenger with no history and no user data saved.",

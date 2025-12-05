@@ -15,8 +15,18 @@
     "contactMe": "連絡する",
     "downloadCV": "履歴書をダウンロード"
   },
-  "sections": { "projects": "プロジェクト", "achievements": "実績", "skills": "できること", "contact": "連絡" },
+  "sections": { "projects": "プロジェクト", "workExperience": "職歴", "achievements": "実績", "skills": "できること", "contact": "連絡" },
   "contact": { "cta": "一緒に素晴らしいものを作りましょう！" },
+  "workExperience": {
+    "jobs": [
+      { "company": "ALTEO", "position": "E-モビリティインターン", "period": "10/2025 - 現在", "location": "ハイブリッド", "description": "ALTEOでのインターンシップで、電動モビリティソリューションと持続可能なエネルギーイニシアチブに焦点を当てています。", "technologies": [] },
+  { "company": "ALTEO", "position": "E-モビリティインターン", "period": "10/2025 - 現在", "location": "ハイブリッド", "description": "ALTEOでのインターンシップで、電動モビリティソリューションと持続可能なエネルギーイニシアチブに焦点を当ています。", "technologies": [], "logo": "/imgs/companies/alteo.png" },
+  { "company": "Camp Cody", "position": "キッチンアシスタント", "period": "06/2025 - 09/2025", "location": "アメリカ", "description": "米国でキッチンアシスタントとして、600人向けのペースの速いキッチンを手伝いながら、チームワークとチーム管理を学びました。", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
+      { "company": "Ortho Graph", "position": "フルスタック開発者", "period": "2024 - 2025", "location": "", "description": "Laravelベースのバックエンドを保守し、Dockerでコンテナ化しました。", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
+  { "company": "Ortho Graph", "position": "フルスタック開発者", "period": "2024 - 2025", "location": "", "description": "Laravelベースのバックエンドを保守し、Dockerでコンテナ化しました。", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "制作技術者", "period": "2021 - 2022", "location": "", "description": "スムーズで一貫した放送を確保するために日々のトラックを整理。洗練された魅力的なコンテンツを提供するためにポッドキャストを録音・編集。", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
+    ]
+  },
   "achievements": {
     "aocThanks": "素晴らしいパズル、感謝",
     "round1": "第1ラウンド",
@@ -29,6 +39,11 @@
   },
   "skills": { "mobile": "モバイル開発", "web": "Web 開発", "infra": "インフラ・DevOps" },
   "projects": {
+    "finance": {
+      "subtitle": "セルフホストのパーソナルファイナンス管理アプリ。",
+      "detail": "React と Cloudflare Workers で構築された、安全なセルフホスト型の個人向けファイナンスアプリ。アカウント、トランザクション、分析の追跡。",
+      "repo": ""
+    },
   "inviso": { "subtitle": "世界で最も安全なチャットアプリ。", "detail": "履歴と保存ユーザーデータを一切持たない P2P 型エンドツーエンド暗号化メッセンジャー。", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "クロスプラットフォームのヘルス＆フィットネストラッカー。", "detail": "Swift + PostgreSQL バックエンドに Apple HealthKit を統合。" },
     "univerx": { "subtitle": "大学生活に必要な機能を一つに。", "detail": "授業や試験などをまとめて管理。" },

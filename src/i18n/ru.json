@@ -15,8 +15,18 @@
     "contactMe": "Связаться",
     "downloadCV": "Скачать резюме"
   },
-  "sections": { "projects": "Проекты", "achievements": "Достижения", "skills": "Что я могу сделать", "contact": "Контакты" },
+  "sections": { "projects": "Проекты", "workExperience": "Опыт работы", "achievements": "Достижения", "skills": "Что я могу сделать", "contact": "Контакты" },
   "contact": { "cta": "Давайте свяжемся и создадим что-то потрясающее!" },
+  "workExperience": {
+    "jobs": [
+      { "company": "ALTEO", "position": "Стажер по электромобильности", "period": "10/2025 - Настоящее время", "location": "Гибрид", "description": "Стажировка в ALTEO с упором на решения в области электромобильности и инициативы в области устойчивой энергетики.", "technologies": [] },
+  { "company": "ALTEO", "position": "Стажер по электромобильности", "period": "10/2025 - Настоящее время", "location": "Гибрид", "description": "Стажировка в ALTEO с упором на решения в области электромобильности и инициативы в области устойчивой энергетики.", "technologies": [], "logo": "/imgs/companies/alteo.png" },
+  { "company": "Camp Cody", "position": "Кухонный помощник", "period": "06/2025 - 09/2025", "location": "США", "description": "Кухонный помощник в США, помогающий обслуживать быструю кухню на 600 человек, изучая командную работу и управление командой.", "technologies": [], "logo": "/imgs/companies/campcody.jpeg" },
+      { "company": "Ortho Graph", "position": "Fullstack разработчик", "period": "2024 - 2025", "location": "", "description": "Поддержка бэкенда на Laravel и контейнеризация с помощью Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"] },
+  { "company": "Ortho Graph", "position": "Fullstack разработчик", "period": "2024 - 2025", "location": "", "description": "Поддержка бэкенда на Laravel и контейнеризация с помощью Docker.", "technologies": ["PHP", "Docker", "Docker-compose", "Git"], "logo": "/imgs/companies/orthograph.png" },
+  { "company": "Mária Rádió", "position": "Технический специалист", "period": "2021 - 2022", "location": "", "description": "Организация ежедневных треков для обеспечения плавных и последовательных трансляций. Запись и редактирование подкастов для создания качественного и интересного контента.", "technologies": [], "logo": "/imgs/companies/mariaradio.webp" }
+    ]
+  },
   "achievements": {
     "aocThanks": "Потрясающие головоломки, спасибо",
     "round1": "Раунд 1",
@@ -29,6 +39,7 @@
   },
   "skills": { "mobile": "Мобильная разработка", "web": "Веб-разработка", "infra": "Инфраструктура и DevOps" },
   "projects": {
+  "finance": { "subtitle": "Самохостинговый менеджер личных финансов.", "detail": "Безопасное самохостинговое приложение для личных финансов, построенное с использованием React и Cloudflare Workers. Отслеживание счетов, транзакций и аналитики.", "repo": "" },
   "inviso": { "subtitle": "Самое безопасное чат‑приложение в мире.", "detail": "P2P обмен сообщениями с E2E‑шифрованием, без истории и хранения пользовательских данных.", "repo": "https://github.com/apptrackit/chat-ios" },
     "trackit": { "subtitle": "Кроссплатформенный трекер здоровья и фитнеса.", "detail": "Интеграция Apple HealthKit с использованием Swift + бэкенд PostgreSQL." },
     "univerx": { "subtitle": "Единственное университетское приложение, которое вам нужно.", "detail": "Управляйте занятиями, экзаменами и многим другим." },
