@@ -226,6 +226,62 @@ const username = '31b4';
   .animate-spin {
     animation: spin 1s linear infinite;
   }
+
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes modalFadeOut {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+
+  @keyframes backdropFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes backdropFadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .modal-opening {
+    animation: modalFadeIn 0.3s ease-out forwards;
+  }
+
+  .modal-closing {
+    animation: modalFadeOut 0.2s ease-in forwards;
+  }
+
+  .backdrop-opening {
+    animation: backdropFadeIn 0.3s ease-out forwards;
+  }
+
+  .backdrop-closing {
+    animation: backdropFadeOut 0.2s ease-in forwards;
+  }
 </style>
 
 <script>
@@ -517,18 +573,40 @@ const username = '31b4';
       if (modalBestWeek) modalBestWeek.textContent = this.stats.bestWeek.toString();
       if (modalActiveWeeks) modalActiveWeeks.textContent = this.stats.activeWeeks.toString();
 
+      // Show modal and start opening animation
+      const modalContent = modal.querySelector('.bg-gray-900\\/95');
       modal.classList.remove('hidden');
       modal.classList.add('flex');
+      modal.classList.add('backdrop-opening');
+      if (modalContent) modalContent.classList.add('modal-opening');
+      
       document.body.style.overflow = 'hidden';
+
+      // Remove animation classes after animation completes
+      setTimeout(() => {
+        modal.classList.remove('backdrop-opening');
+        if (modalContent) modalContent.classList.remove('modal-opening');
+      }, 300);
     }
 
     closeModal() {
       const modal = document.getElementById('pulse-modal');
       if (!modal) return;
 
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.body.style.overflow = '';
+      const modalContent = modal.querySelector('.bg-gray-900\\/95');
+      
+      // Start closing animation
+      modal.classList.add('backdrop-closing');
+      if (modalContent) modalContent.classList.add('modal-closing');
+
+      // Hide modal after animation completes
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modal.classList.remove('backdrop-closing');
+        if (modalContent) modalContent.classList.remove('modal-closing');
+        document.body.style.overflow = '';
+      }, 200);
     }
 
     animate() {
