@@ -11,7 +11,9 @@
     "repository": "Repository",
     "resume": "Resume",
     "resumeEnglish": "English Resume",
-    "resumeHungarian": "Hungarian Resume"
+    "resumeHungarian": "Hungarian Resume",
+    "commandPalette": "Command Palette",
+    "pressKey": "Press"
   },
   "hero": {
     "tagline": "Entrepreneur, developer and boxer with unlimited ambition."
@@ -29,7 +31,9 @@
     "workExperience": "Work Experience",
     "achievements": "Achievements",
     "skills": "What I Can Build",
-    "contact": "Contact Me"
+    "contact": "Contact Me",
+    "now": "What I'm Doing Now",
+    "github": "Live on GitHub"
   },
   "contact": {
     "cta": "Let's connect and build something amazing together!"
@@ -90,7 +94,7 @@
     "round3": "Round 3",
     "final": "Final",
     "aoc": {
-      "title": "Advent of Code - 2022-24"
+      "title": "Advent of Code - 2022-25"
     },
     "bbb": {
       "title": "Bakonyi Bittfarago Bajnokság - 2022",
